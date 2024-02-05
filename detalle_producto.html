@@ -55,14 +55,14 @@
     <meta name="description" content="Diseño y producción independiente" />
     <meta name="robots" content="index, follow, max-snippet:-1,
             max-image-preview:large, max-video-preview:-1" />
-    <link rel="canonical" href="http://localhost/proinseg/" />
+    <link rel="canonical" href="https://jonasmn.github.io/proinseg/" />
     <meta property="og:locale" content="es_ES" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="ProinSeg - Diseño y producción
             independiente" />
     <meta property="og:description" content="Diseño y producción
             independiente" />
-    <meta property="og:url" content="http://localhost/proinseg/" />
+    <meta property="og:url" content="https://jonasmn.github.io/proinseg/" />
     <meta property="og:site_name" content="ProinSeg" />
     <meta name="twitter:card" content="summary_large_image" />
     <script type="application/ld+json"
@@ -176,7 +176,7 @@
     <header class="header clearfix">
         <div class="container">
 
-            <a href="http://localhost/proinseg/" class="logo">
+            <a href="https://jonasmn.github.io/proinseg/" class="logo">
                 <img src="img/LOGO PRINCIPAL.svg" alt="ProinSeg" class="img-fluid">
             </a>
 
@@ -191,7 +191,7 @@
 
                 <ul class="menu list-unstyled">
                     <li class="menu-products">
-                        <a href="http://localhost/proinseg/" data-open="submenu-shop">Productos</a>
+                        <a href="https://jonasmn.github.io/proinseg/" data-open="submenu-shop">Productos</a>
 
                     </li>
                     <li class="menu-collections ">
@@ -267,17 +267,17 @@
                                     <figure class="woocommerce-product-gallery__wrapper" id="contenedorDeImagenes">
 
                                         <ul id="image-gallery" class="gallery list-unstyled cS-hidden">
-                                            <li data-thumb="http://localhost/proinseg/admin/imagenes_cargadas/3341f6f0161818700770845051910656400.jpg"> 
-                                                <img src="http://localhost/proinseg/admin/imagenes_cargadas/3341f6f0161818700770845051910656400.jpg" />
+                                            <li data-thumb="https://jonasmn.github.io/proinseg/admin/imagenes_cargadas/3341f6f0161818700770845051910656400.jpg"> 
+                                                <img src="https://jonasmn.github.io/proinseg/admin/imagenes_cargadas/3341f6f0161818700770845051910656400.jpg" />
                                                  </li>
-                                            <li data-thumb="http://localhost/proinseg/admin/imagenes_cargadas/367147f1161684874883184168510285525.jpg"> 
-                                                <img src="http://localhost/proinseg/admin/imagenes_cargadas/367147f1161684874883184168510285525.jpg" />
+                                            <li data-thumb="https://jonasmn.github.io/proinseg/admin/imagenes_cargadas/367147f1161684874883184168510285525.jpg"> 
+                                                <img src="https://jonasmn.github.io/proinseg/admin/imagenes_cargadas/367147f1161684874883184168510285525.jpg" />
                                                  </li>
-                                            <li data-thumb="http://localhost/proinseg/admin/imagenes_cargadas/e275193b161687193629915241710267790.jpg"> 
-                                                <img src="http://localhost/proinseg/admin/imagenes_cargadas/e275193b161687193629915241710267790.jpg" />
+                                            <li data-thumb="https://jonasmn.github.io/proinseg/admin/imagenes_cargadas/e275193b161687193629915241710267790.jpg"> 
+                                                <img src="https://jonasmn.github.io/proinseg/admin/imagenes_cargadas/e275193b161687193629915241710267790.jpg" />
                                                  </li>
-                                            <li data-thumb="http://localhost/proinseg/admin/imagenes_cargadas/7d3e28d1161685156930286269610975077.jpg"> 
-                                                <img src="http://localhost/proinseg/admin/imagenes_cargadas/7d3e28d1161685156930286269610975077.jpg" />
+                                            <li data-thumb="https://jonasmn.github.io/proinseg/admin/imagenes_cargadas/7d3e28d1161685156930286269610975077.jpg"> 
+                                                <img src="https://jonasmn.github.io/proinseg/admin/imagenes_cargadas/7d3e28d1161685156930286269610975077.jpg" />
                                                  </li>
                         
                                         </ul>
@@ -664,7 +664,7 @@
                 <div class="row">
                     <div class="col-12 col-md-6 my-3">
 
-                        <a href="http://localhost/proinseg/" class="logo">
+                        <a href="https://jonasmn.github.io/proinseg/" class="logo">
                             <img src="./img/cam_icon.svg" alt="ProinSeg" class="img-fluid">
                         </a>
 
@@ -1020,7 +1020,7 @@
 
 
             const http = new XMLHttpRequest();
-            const url = 'http://localhost/proinseg/admin/php/request.php?Productos=obtenerProductosPorId&id=' + id;
+            const url = 'https://jonasmn.github.io/proinseg/admin/php/request.php?Productos=obtenerProductosPorId&id=' + id;
 
             http.onreadystatechange = function () {
                 if (this.readyState == 4 && this.status == 200) {
@@ -1089,7 +1089,7 @@
 
         function agregarProductoDiv(imagen, titulo, precio) {
             let divProducto = $('#otros_productos').find('.base').clone();
-            $(divProducto).find('#imagen_producto').attr('src', 'http://localhost/proinseg/admin/' + imagen);
+            $(divProducto).find('#imagen_producto').attr('src', 'https://jonasmn.github.io/proinseg/admin/' + imagen);
             $(divProducto).find('#titulo_producto').text(titulo);
             $(divProducto).find('#precio_producto').html('<span class="woocommerce-Price-currencySymbol">$</span>' + precio);
             $(divProducto).removeClass('base');

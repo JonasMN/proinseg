@@ -76,7 +76,7 @@
 	<header class="header clearfix">
 		<div class="container">
 
-			<a href="http://localhost/proinseg/" class="logo">
+			<a href="https://jonasmn.github.io/proinseg/" class="logo">
 				<img src="img/LOGO PRINCIPAL.svg" alt="ProinSeg" class="img-fluid">
 			</a>
 
@@ -240,7 +240,7 @@
 				<div class="row">
 					<div class="col-12 col-md-6 my-3">
 
-						<a href="http://localhost/proinseg/" class="logo">
+						<a href="https://jonasmn.github.io/proinseg/" class="logo">
 							<img src="./img/cam_icon.svg" alt="ProinSeg" class="img-fluid">
 						</a>
 
@@ -323,7 +323,7 @@
 						$(divBase).find('#h1Nombre').text(element.nombre);
 						$(divBase).find('#precioProducto').text(element.precio);
 
-						$(divBase).find('#hrefProducto').attr('href','http://localhost/proinseg/detalle_producto.html?id=' + element.id);
+						$(divBase).find('#hrefProducto').attr('href','https://jonasmn.github.io/proinseg/detalle_producto.html?id=' + element.id);
 						$(divBase).find('#imgProducto').attr('style','background-image: url("admin'+ element.foto_index.substring(1) +'")');
 						$('#divPadreProductos').append(divBase);
 						$('#sinProductos').attr('style','display:none');
@@ -348,7 +348,7 @@
 		obtenerProductos();
 		$('#otrasCategorias').val(c.toLocaleLowerCase());
 		$('#otrasCategorias').change(function() {
-			window.location.href = 'http://localhost/proinseg/productos_lista.html?categoria='+$(this).val();
+			window.location.href = 'https://jonasmn.github.io/proinseg/productos_lista.html?categoria='+$(this).val();
 		});
 	});
 
