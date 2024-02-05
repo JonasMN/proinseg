@@ -757,7 +757,7 @@
         url: './admin/php/request.php?Landing=obtenerPresentacion',        
 		dataType : 'JSON',
         success: function(response) {
-			console.log('RESPUESTA',response);
+			console.log(response);
 			if(typeof response  === 'object')
 			{
 				$('#titulo_presentacion').text(response[0].titulo);

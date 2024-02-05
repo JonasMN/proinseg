@@ -24,8 +24,8 @@ body
 	margin: auto;
 }
 .img-tamaño{
-    width: 350px;
-	height: 350px;
+    max-width: 100%;
+	height: auto;
 	margin-bottom: 30px;
 	object-fit: cover;
 
