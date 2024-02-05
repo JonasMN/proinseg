@@ -1,0 +1,177 @@
+[01-Mar-2021 01:28:46 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home/csbbckmu25kg/proinseg.com/admin/php/Productos.php:46
+Stack trace:
+#0 /home/csbbckmu25kg/proinseg.com/admin/php/request.php(16): Productos->registrarProducto(Array)
+#1 {main}
+  thrown in /home/csbbckmu25kg/proinseg.com/admin/php/Productos.php on line 46
+[01-Mar-2021 01:37:51 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000] [1044] Access denied for user 'isema'@'localhost' to database 'proinseg' in /home/csbbckmu25kg/proinseg.com/admin/php/Db.php:17
+Stack trace:
+#0 /home/csbbckmu25kg/proinseg.com/admin/php/Db.php(17): PDO->__construct('mysql:dbname=pr...', 'isema', 'Meza22760519')
+#1 /home/csbbckmu25kg/proinseg.com/admin/php/Productos.php(17): Db->__construct()
+#2 /home/csbbckmu25kg/proinseg.com/admin/php/request.php(15): Productos->__construct()
+#3 {main}
+  thrown in /home/csbbckmu25kg/proinseg.com/admin/php/Db.php on line 17
+[01-Mar-2021 02:20:06 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method Pais::obtenerProductos() in /home/csbbckmu25kg/proinseg.com/admin/php/request.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/csbbckmu25kg/proinseg.com/admin/php/request.php on line 16
+[01-Mar-2021 02:22:48 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method Productos::obtenerProductos() in /home/csbbckmu25kg/proinseg.com/admin/php/request.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/csbbckmu25kg/proinseg.com/admin/php/request.php on line 16
+[01-Mar-2021 02:23:16 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method Productos::listrProductos() in /home/csbbckmu25kg/proinseg.com/admin/php/request.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/csbbckmu25kg/proinseg.com/admin/php/request.php on line 16
+[01-Mar-2021 02:23:31 UTC] PHP Notice:  Array to string conversion in /home/csbbckmu25kg/proinseg.com/admin/php/request.php on line 16
+[01-Mar-2021 02:23:51 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method Productos::obtenerProductos() in /home/csbbckmu25kg/proinseg.com/admin/php/request.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/csbbckmu25kg/proinseg.com/admin/php/request.php on line 16
+[01-Mar-2021 02:23:55 UTC] PHP Notice:  Array to string conversion in /home/csbbckmu25kg/proinseg.com/admin/php/request.php on line 16
+[01-Mar-2021 02:24:49 UTC] PHP Notice:  Array to string conversion in /home/csbbckmu25kg/proinseg.com/admin/php/request.php on line 16
+[01-Mar-2021 02:24:52 UTC] PHP Notice:  Array to string conversion in /home/csbbckmu25kg/proinseg.com/admin/php/request.php on line 16
+[01-Mar-2021 02:24:52 UTC] PHP Notice:  Array to string conversion in /home/csbbckmu25kg/proinseg.com/admin/php/request.php on line 16
+[01-Mar-2021 03:40:49 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home/csbbckmu25kg/proinseg.com/admin/php/Productos.php:22
+Stack trace:
+#0 /home/csbbckmu25kg/proinseg.com/admin/php/request.php(16): Productos->listarProductos(Array)
+#1 {main}
+  thrown in /home/csbbckmu25kg/proinseg.com/admin/php/Productos.php on line 22
+[01-Mar-2021 03:41:00 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home/csbbckmu25kg/proinseg.com/admin/php/Productos.php:22
+Stack trace:
+#0 /home/csbbckmu25kg/proinseg.com/admin/php/request.php(16): Productos->listarProductos(Array)
+#1 {main}
+  thrown in /home/csbbckmu25kg/proinseg.com/admin/php/Productos.php on line 22
+[01-Mar-2021 04:02:05 UTC] PHP Warning:  scandir(/home/csbbckmu25kg/proinseg.com/admin/php../imagenes_cargadas/1614570625/): failed to open dir: No such file or directory in /home/csbbckmu25kg/proinseg.com/admin/php/obtenerImagenes.php on line 9
+[01-Mar-2021 04:02:05 UTC] PHP Warning:  scandir(): (errno 2): No such file or directory in /home/csbbckmu25kg/proinseg.com/admin/php/obtenerImagenes.php on line 9
+[01-Mar-2021 04:16:14 UTC] PHP Warning:  scandir(/home/csbbckmu25kg/proinseg.com/admin/php/miCarpetaPrimera): failed to open dir: No such file or directory in /home/csbbckmu25kg/proinseg.com/admin/php/obtenerImagenes.php on line 9
+[01-Mar-2021 04:16:14 UTC] PHP Warning:  scandir(): (errno 2): No such file or directory in /home/csbbckmu25kg/proinseg.com/admin/php/obtenerImagenes.php on line 9
+[01-Mar-2021 04:16:51 UTC] PHP Warning:  scandir(/home/csbbckmu25kg/proinseg.com/admin/php/miCarpetaPrimera): failed to open dir: No such file or directory in /home/csbbckmu25kg/proinseg.com/admin/php/obtenerImagenes.php on line 9
+[01-Mar-2021 04:16:51 UTC] PHP Warning:  scandir(): (errno 2): No such file or directory in /home/csbbckmu25kg/proinseg.com/admin/php/obtenerImagenes.php on line 9
+[01-Mar-2021 04:17:08 UTC] PHP Warning:  scandir(/home/csbbckmu25kg/proinseg.com/admin/php/miCarpetaPrimera): failed to open dir: No such file or directory in /home/csbbckmu25kg/proinseg.com/admin/php/obtenerImagenes.php on line 9
+[01-Mar-2021 04:17:08 UTC] PHP Warning:  scandir(): (errno 2): No such file or directory in /home/csbbckmu25kg/proinseg.com/admin/php/obtenerImagenes.php on line 9
+[01-Mar-2021 04:18:42 UTC] PHP Warning:  scandir(/home/csbbckmu25kg/proinseg.com/admin/php/miCarpetaPrimera): failed to open dir: No such file or directory in /home/csbbckmu25kg/proinseg.com/admin/php/obtenerImagenes.php on line 9
+[01-Mar-2021 04:18:42 UTC] PHP Warning:  scandir(): (errno 2): No such file or directory in /home/csbbckmu25kg/proinseg.com/admin/php/obtenerImagenes.php on line 9
+[01-Mar-2021 13:24:16 UTC] PHP Warning:  scandir(/home/csbbckmu25kg/proinseg.com/admin/php/miCarpetaPrimera): failed to open dir: No such file or directory in /home/csbbckmu25kg/proinseg.com/admin/php/obtenerImagenes.php on line 9
+[01-Mar-2021 13:24:16 UTC] PHP Warning:  scandir(): (errno 2): No such file or directory in /home/csbbckmu25kg/proinseg.com/admin/php/obtenerImagenes.php on line 9
+[01-Mar-2021 13:24:21 UTC] PHP Warning:  scandir(/home/csbbckmu25kg/proinseg.com/admin/php/miCarpetaPrimera): failed to open dir: No such file or directory in /home/csbbckmu25kg/proinseg.com/admin/php/obtenerImagenes.php on line 9
+[01-Mar-2021 13:24:21 UTC] PHP Warning:  scandir(): (errno 2): No such file or directory in /home/csbbckmu25kg/proinseg.com/admin/php/obtenerImagenes.php on line 9
+[03-Mar-2021 19:03:14 UTC] PHP Warning:  A non-numeric value encountered in /home/csbbckmu25kg/proinseg.com/admin/php/Usuarios.php on line 49
+[03-Mar-2021 19:03:14 UTC] PHP Warning:  A non-numeric value encountered in /home/csbbckmu25kg/proinseg.com/admin/php/Usuarios.php on line 49
+[03-Mar-2021 19:03:14 UTC] PHP Warning:  A non-numeric value encountered in /home/csbbckmu25kg/proinseg.com/admin/php/Usuarios.php on line 49
+[03-Mar-2021 19:03:14 UTC] PHP Warning:  A non-numeric value encountered in /home/csbbckmu25kg/proinseg.com/admin/php/Usuarios.php on line 49
+[03-Mar-2021 19:03:14 UTC] PHP Warning:  A non-numeric value encountered in /home/csbbckmu25kg/proinseg.com/admin/php/Usuarios.php on line 49
+[03-Mar-2021 19:03:14 UTC] PHP Warning:  A non-numeric value encountered in /home/csbbckmu25kg/proinseg.com/admin/php/Usuarios.php on line 49
+[03-Mar-2021 19:03:14 UTC] PHP Warning:  A non-numeric value encountered in /home/csbbckmu25kg/proinseg.com/admin/php/Usuarios.php on line 49
+[03-Mar-2021 19:05:57 UTC] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/csbbckmu25kg/proinseg.com/admin/php/Usuarios.php on line 24
+[03-Mar-2021 19:05:57 UTC] PHP Warning:  Illegal string offset 'clave' in /home/csbbckmu25kg/proinseg.com/admin/php/Usuarios.php on line 28
+[03-Mar-2021 19:07:00 UTC] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/csbbckmu25kg/proinseg.com/admin/php/Usuarios.php on line 23
+[03-Mar-2021 19:07:00 UTC] PHP Warning:  Illegal string offset 'clave' in /home/csbbckmu25kg/proinseg.com/admin/php/Usuarios.php on line 27
+[03-Mar-2021 19:07:36 UTC] PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in /home/csbbckmu25kg/proinseg.com/admin/php/Usuarios.php:27
+Stack trace:
+#0 /home/csbbckmu25kg/proinseg.com/admin/php/request.php(16): Usuarios->login(Array)
+#1 {main}
+  thrown in /home/csbbckmu25kg/proinseg.com/admin/php/Usuarios.php on line 27
+[03-Mar-2021 19:27:13 UTC] PHP Notice:  Trying to get property 'nombre' of non-object in /home/csbbckmu25kg/proinseg.com/admin/php/Usuarios.php on line 28
+[03-Mar-2021 19:27:23 UTC] PHP Notice:  Trying to get property 'nombre' of non-object in /home/csbbckmu25kg/proinseg.com/admin/php/Usuarios.php on line 28
+[06-Mar-2021 13:53:45 UTC] PHP Warning:  scandir(/home/csbbckmu25kg/proinseg.com/admin/php/miCarpetaPrimera): failed to open dir: No such file or directory in /home/csbbckmu25kg/proinseg.com/admin/php/obtenerImagenes.php on line 9
+[06-Mar-2021 13:53:45 UTC] PHP Warning:  scandir(): (errno 2): No such file or directory in /home/csbbckmu25kg/proinseg.com/admin/php/obtenerImagenes.php on line 9
+[06-Mar-2021 14:19:50 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method Productos::modificarLinea() in /home/csbbckmu25kg/proinseg.com/admin/php/request.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/csbbckmu25kg/proinseg.com/admin/php/request.php on line 16
+[06-Mar-2021 14:22:13 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method Landing::modificarPresentacion() in /home/csbbckmu25kg/proinseg.com/admin/php/request.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/csbbckmu25kg/proinseg.com/admin/php/request.php on line 16
+[06-Mar-2021 14:28:44 UTC] PHP Warning:  require_once(landing.php): failed to open stream: No such file or directory in /home/csbbckmu25kg/proinseg.com/admin/php/request.php on line 10
+[06-Mar-2021 14:28:44 UTC] PHP Fatal error:  require_once(): Failed opening required 'landing.php' (include_path='.:/opt/alt/php73/usr/share/pear') in /home/csbbckmu25kg/proinseg.com/admin/php/request.php on line 10
+[06-Mar-2021 14:33:39 UTC] PHP Warning:  require_once(landing.php): failed to open stream: No such file or directory in /home/csbbckmu25kg/proinseg.com/admin/php/request.php on line 10
+[06-Mar-2021 14:33:39 UTC] PHP Fatal error:  require_once(): Failed opening required 'landing.php' (include_path='.:/opt/alt/php73/usr/share/pear') in /home/csbbckmu25kg/proinseg.com/admin/php/request.php on line 10
+[06-Mar-2021 14:35:24 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method Landing::modificarTaller() in /home/csbbckmu25kg/proinseg.com/admin/php/request.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/csbbckmu25kg/proinseg.com/admin/php/request.php on line 16
+[06-Mar-2021 15:01:49 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method Productos::modificarLinea() in /home/csbbckmu25kg/proinseg.com/admin/php/request.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/csbbckmu25kg/proinseg.com/admin/php/request.php on line 16
+[06-Mar-2021 15:02:10 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method Productos::modificarLinea() in /home/csbbckmu25kg/proinseg.com/admin/php/request.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/csbbckmu25kg/proinseg.com/admin/php/request.php on line 16
+[06-Mar-2021 15:02:13 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method Productos::modificarLinea() in /home/csbbckmu25kg/proinseg.com/admin/php/request.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/csbbckmu25kg/proinseg.com/admin/php/request.php on line 16
+[06-Mar-2021 15:02:56 UTC] PHP Notice:  Undefined index: foto1 in /home/csbbckmu25kg/proinseg.com/admin/php/Landing.php on line 219
+[06-Mar-2021 15:02:56 UTC] PHP Notice:  Undefined index: foto2 in /home/csbbckmu25kg/proinseg.com/admin/php/Landing.php on line 220
+[06-Mar-2021 15:10:17 UTC] PHP Notice:  Undefined index: idLinea in /home/csbbckmu25kg/proinseg.com/admin/php/Landing.php on line 284
+[06-Mar-2021 15:11:01 UTC] PHP Warning:  require_once(landing.php): failed to open stream: No such file or directory in /home/csbbckmu25kg/proinseg.com/admin/php/request.php on line 10
+[06-Mar-2021 15:11:01 UTC] PHP Fatal error:  require_once(): Failed opening required 'landing.php' (include_path='.:/opt/alt/php73/usr/share/pear') in /home/csbbckmu25kg/proinseg.com/admin/php/request.php on line 10
+[06-Mar-2021 15:12:02 UTC] PHP Notice:  Undefined index: idProyecto in /home/csbbckmu25kg/proinseg.com/admin/php/Landing.php on line 327
+[06-Mar-2021 15:12:02 UTC] PHP Notice:  Undefined index: idProyecto in /home/csbbckmu25kg/proinseg.com/admin/php/Landing.php on line 327
+[06-Mar-2021 15:13:51 UTC] PHP Notice:  Undefined index: idProyecto  in /home/csbbckmu25kg/proinseg.com/admin/php/Landing.php on line 336
+[06-Mar-2021 15:15:02 UTC] PHP Fatal error:  Cannot redeclare Landing::modificarProyectos() in /home/csbbckmu25kg/proinseg.com/admin/php/Landing.php on line 352
+[06-Mar-2021 15:15:39 UTC] PHP Notice:  Undefined index: idTaller in /home/csbbckmu25kg/proinseg.com/admin/php/Landing.php on line 397
+[06-Mar-2021 15:29:51 UTC] PHP Warning:  scandir(/home/csbbckmu25kg/proinseg.com/admin/php/miCarpetaPrimera): failed to open dir: No such file or directory in /home/csbbckmu25kg/proinseg.com/admin/php/obtenerImagenes.php on line 9
+[06-Mar-2021 15:29:51 UTC] PHP Warning:  scandir(): (errno 2): No such file or directory in /home/csbbckmu25kg/proinseg.com/admin/php/obtenerImagenes.php on line 9
+[06-Mar-2021 15:31:15 UTC] PHP Warning:  scandir(/home/csbbckmu25kg/proinseg.com/admin/php/miCarpetaPrimera): failed to open dir: No such file or directory in /home/csbbckmu25kg/proinseg.com/admin/php/obtenerImagenes.php on line 9
+[06-Mar-2021 15:31:15 UTC] PHP Warning:  scandir(): (errno 2): No such file or directory in /home/csbbckmu25kg/proinseg.com/admin/php/obtenerImagenes.php on line 9
+[06-Mar-2021 15:37:32 UTC] PHP Warning:  mkdir(): File exists in /home/csbbckmu25kg/proinseg.com/admin/php/Landing.php on line 308
+[06-Mar-2021 15:37:44 UTC] PHP Warning:  mkdir(): File exists in /home/csbbckmu25kg/proinseg.com/admin/php/Landing.php on line 308
+[06-Mar-2021 15:37:49 UTC] PHP Warning:  mkdir(): File exists in /home/csbbckmu25kg/proinseg.com/admin/php/Landing.php on line 308
+[06-Mar-2021 15:38:59 UTC] PHP Notice:  Undefined index: nombre in /home/csbbckmu25kg/proinseg.com/admin/php/Usuarios.php on line 47
+[06-Mar-2021 15:46:32 UTC] PHP Warning:  scandir(/home/csbbckmu25kg/proinseg.com/admin/php/miCarpetaPrimera): failed to open dir: No such file or directory in /home/csbbckmu25kg/proinseg.com/admin/php/obtenerImagenes.php on line 9
+[06-Mar-2021 15:46:32 UTC] PHP Warning:  scandir(): (errno 2): No such file or directory in /home/csbbckmu25kg/proinseg.com/admin/php/obtenerImagenes.php on line 9
+[10-Mar-2021 21:50:25 UTC] PHP Notice:  Undefined index: correo in /home/csbbckmu25kg/proinseg.com/admin/php/Usuarios.php on line 19
+[10-Mar-2021 21:50:39 UTC] PHP Notice:  Undefined index: correo in /home/csbbckmu25kg/proinseg.com/admin/php/Usuarios.php on line 19
+[23-Mar-2021 00:58:45 UTC] PHP Warning:  scandir(/home/csbbckmu25kg/proinseg.com/admin/php/miCarpetaPrimera): failed to open dir: No such file or directory in /home/csbbckmu25kg/proinseg.com/admin/php/obtenerImagenes.php on line 9
+[23-Mar-2021 00:58:45 UTC] PHP Warning:  scandir(): (errno 2): No such file or directory in /home/csbbckmu25kg/proinseg.com/admin/php/obtenerImagenes.php on line 9
+[23-Mar-2021 00:58:57 UTC] PHP Warning:  scandir(/home/csbbckmu25kg/proinseg.com/admin/php/miCarpetaPrimera): failed to open dir: No such file or directory in /home/csbbckmu25kg/proinseg.com/admin/php/obtenerImagenes.php on line 9
+[23-Mar-2021 00:58:57 UTC] PHP Warning:  scandir(): (errno 2): No such file or directory in /home/csbbckmu25kg/proinseg.com/admin/php/obtenerImagenes.php on line 9
+[23-Mar-2021 00:59:19 UTC] PHP Warning:  scandir(/home/csbbckmu25kg/proinseg.com/admin/php/miCarpetaPrimera): failed to open dir: No such file or directory in /home/csbbckmu25kg/proinseg.com/admin/php/obtenerImagenes.php on line 9
+[23-Mar-2021 00:59:19 UTC] PHP Warning:  scandir(): (errno 2): No such file or directory in /home/csbbckmu25kg/proinseg.com/admin/php/obtenerImagenes.php on line 9
+[23-Mar-2021 01:17:49 UTC] PHP Warning:  scandir(/home/csbbckmu25kg/proinseg.com/admin/php/miCarpetaPrimera): failed to open dir: No such file or directory in /home/csbbckmu25kg/proinseg.com/admin/php/obtenerImagenes.php on line 9
+[23-Mar-2021 01:17:49 UTC] PHP Warning:  scandir(): (errno 2): No such file or directory in /home/csbbckmu25kg/proinseg.com/admin/php/obtenerImagenes.php on line 9
+[25-Mar-2021 21:02:04 UTC] PHP Notice:  Undefined variable: request in /home/csbbckmu25kg/proinseg.com/admin/php/Productos.php on line 35
+[25-Mar-2021 21:02:54 UTC] PHP Warning:  scandir(/home/csbbckmu25kg/proinseg.com/admin/php/miCarpetaPrimera): failed to open dir: No such file or directory in /home/csbbckmu25kg/proinseg.com/admin/php/obtenerImagenes.php on line 9
+[25-Mar-2021 21:02:54 UTC] PHP Warning:  scandir(): (errno 2): No such file or directory in /home/csbbckmu25kg/proinseg.com/admin/php/obtenerImagenes.php on line 9
+[25-Mar-2021 21:03:00 UTC] PHP Warning:  scandir(/home/csbbckmu25kg/proinseg.com/admin/php/miCarpetaPrimera): failed to open dir: No such file or directory in /home/csbbckmu25kg/proinseg.com/admin/php/obtenerImagenes.php on line 9
+[25-Mar-2021 21:03:00 UTC] PHP Warning:  scandir(): (errno 2): No such file or directory in /home/csbbckmu25kg/proinseg.com/admin/php/obtenerImagenes.php on line 9
+[25-Mar-2021 21:03:12 UTC] PHP Warning:  scandir(/home/csbbckmu25kg/proinseg.com/admin/php/miCarpetaPrimera): failed to open dir: No such file or directory in /home/csbbckmu25kg/proinseg.com/admin/php/obtenerImagenes.php on line 9
+[25-Mar-2021 21:03:12 UTC] PHP Warning:  scandir(): (errno 2): No such file or directory in /home/csbbckmu25kg/proinseg.com/admin/php/obtenerImagenes.php on line 9
+[25-Mar-2021 23:30:48 UTC] PHP Warning:  scandir(/home/csbbckmu25kg/proinseg.com/admin/php/miCarpetaPrimera): failed to open dir: No such file or directory in /home/csbbckmu25kg/proinseg.com/admin/php/obtenerImagenes.php on line 9
+[25-Mar-2021 23:30:48 UTC] PHP Warning:  scandir(): (errno 2): No such file or directory in /home/csbbckmu25kg/proinseg.com/admin/php/obtenerImagenes.php on line 9
+[26-Mar-2021 00:35:42 UTC] PHP Warning:  scandir(/home/csbbckmu25kg/proinseg.com/admin/php/miCarpetaPrimera): failed to open dir: No such file or directory in /home/csbbckmu25kg/proinseg.com/admin/php/obtenerImagenes.php on line 9
+[26-Mar-2021 00:35:42 UTC] PHP Warning:  scandir(): (errno 2): No such file or directory in /home/csbbckmu25kg/proinseg.com/admin/php/obtenerImagenes.php on line 9
+[26-Mar-2021 00:48:18 UTC] PHP Warning:  scandir(/home/csbbckmu25kg/proinseg.com/admin/php/miCarpetaPrimera): failed to open dir: No such file or directory in /home/csbbckmu25kg/proinseg.com/admin/php/obtenerImagenes.php on line 9
+[26-Mar-2021 00:48:18 UTC] PHP Warning:  scandir(): (errno 2): No such file or directory in /home/csbbckmu25kg/proinseg.com/admin/php/obtenerImagenes.php on line 9
+[26-Mar-2021 00:52:49 UTC] PHP Warning:  scandir(/home/csbbckmu25kg/proinseg.com/admin/php/miCarpetaPrimera): failed to open dir: No such file or directory in /home/csbbckmu25kg/proinseg.com/admin/php/obtenerImagenes.php on line 9
+[26-Mar-2021 00:52:49 UTC] PHP Warning:  scandir(): (errno 2): No such file or directory in /home/csbbckmu25kg/proinseg.com/admin/php/obtenerImagenes.php on line 9
+[26-Mar-2021 03:19:17 UTC] PHP Warning:  scandir(/home/csbbckmu25kg/proinseg.com/admin/php/miCarpetaPrimera): failed to open dir: No such file or directory in /home/csbbckmu25kg/proinseg.com/admin/php/obtenerImagenes.php on line 9
+[26-Mar-2021 03:19:17 UTC] PHP Warning:  scandir(): (errno 2): No such file or directory in /home/csbbckmu25kg/proinseg.com/admin/php/obtenerImagenes.php on line 9
+[26-Mar-2021 03:19:34 UTC] PHP Warning:  scandir(/home/csbbckmu25kg/proinseg.com/admin/php/miCarpetaPrimera): failed to open dir: No such file or directory in /home/csbbckmu25kg/proinseg.com/admin/php/obtenerImagenes.php on line 9
+[26-Mar-2021 03:19:34 UTC] PHP Warning:  scandir(): (errno 2): No such file or directory in /home/csbbckmu25kg/proinseg.com/admin/php/obtenerImagenes.php on line 9
+[28-Mar-2021 16:55:10 UTC] PHP Notice:  Undefined variable: error in /home/csbbckmu25kg/proinseg.com/admin/php/Landing.php on line 340
+[28-Mar-2021 17:16:37 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002] Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2) in /home/csbbckmu25kg/proinseg.com/admin/php/Db.php:17
+Stack trace:
+#0 /home/csbbckmu25kg/proinseg.com/admin/php/Db.php(17): PDO->__construct('mysql:dbname=pr...', 'proinseg', 'Meza22760519')
+#1 /home/csbbckmu25kg/proinseg.com/admin/php/Landing.php(16): Db->__construct()
+#2 /home/csbbckmu25kg/proinseg.com/admin/php/request.php(15): Landing->__construct()
+#3 {main}
+  thrown in /home/csbbckmu25kg/proinseg.com/admin/php/Db.php on line 17
+[28-Mar-2021 20:00:08 UTC] PHP Warning:  mkdir(): File exists in /home/csbbckmu25kg/proinseg.com/admin/php/Landing.php on line 310
+[11-Apr-2021 23:38:16 UTC] PHP Notice:  Undefined index: categoria in /home/csbbckmu25kg/proinseg.com/admin/php/Productos.php on line 29
+[11-Apr-2021 23:38:22 UTC] PHP Notice:  Undefined index: categoria in /home/csbbckmu25kg/proinseg.com/admin/php/Productos.php on line 29
+[11-Apr-2021 23:39:16 UTC] PHP Notice:  Undefined index: categoria in /home/csbbckmu25kg/proinseg.com/admin/php/Productos.php on line 29
+[11-Apr-2021 23:51:58 UTC] PHP Notice:  Undefined index: categoria in /home/csbbckmu25kg/proinseg.com/admin/php/Productos.php on line 32
+[11-Apr-2021 23:55:13 UTC] PHP Notice:  Undefined index: categoria in /home/csbbckmu25kg/proinseg.com/admin/php/Productos.php on line 29
+[11-Apr-2021 23:56:52 UTC] PHP Notice:  Undefined index: categoria in /home/csbbckmu25kg/proinseg.com/admin/php/Productos.php on line 29
+[12-Apr-2021 03:37:45 UTC] PHP Notice:  Undefined index: categoria in /home/csbbckmu25kg/proinseg.com/admin/php/Productos.php on line 29
+[26-Jun-2021 15:44:41 UTC] PHP Warning:  require_once(productos.php): failed to open stream: No such file or directory in /home/csbbckmu25kg/proinseg.com/admin/php/request.php on line 10
+[26-Jun-2021 15:44:41 UTC] PHP Fatal error:  require_once(): Failed opening required 'productos.php' (include_path='.:/opt/alt/php73/usr/share/pear') in /home/csbbckmu25kg/proinseg.com/admin/php/request.php on line 10
+[29-Jul-2021 14:06:06 UTC] PHP Notice:  Undefined index: categoria in /home/csbbckmu25kg/proinseg.com/admin/php/Productos.php on line 29
+[14-Aug-2021 03:32:00 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method Landing::listar'A=0() in /home/csbbckmu25kg/proinseg.com/admin/php/request.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/csbbckmu25kg/proinseg.com/admin/php/request.php on line 16

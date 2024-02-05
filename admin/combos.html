@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Combos</title>
+  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="dist/css/loading.css">
+
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+  <!-- iCheck -->
+  <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <!-- JQVMap -->
+  <!-- <link rel="stylesheet" href="plugins/jqvmap/jqvmap.min.css"> -->
+  <!-- Theme style -->
+
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <!-- Daterange picker -->
+  <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
+  <!-- summernote -->
+  <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
+
+  <!-- summernote -->
+  <link rel="stylesheet" href="dist/css/input-file/fileinput.css">
+
+
+  <link rel="stylesheet" href="stilo.css">
+</head>
+
+<body>
+
+  <div class="loading" style="display: none;">
+	  <img class="img-loading" src="./dist/img/loading.svg">
+  </div>  
+  <div class="wrapper">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand navbar-white navbar-light">
+      <!-- Left navbar links -->
+      <ul class="navbar-nav" style="max-width: 100%; display: inline-block;">
+
+        <li class="nav-item d-none d-sm-inline-block">
+          <a href="index.html" class="nav-link">PRODUCTOS</a>
+        </li>
+        <li class="nav-item d-none d-sm-inline-block activo">
+          <a href="combos.html" class="nav-link">COMBOS</a>
+        </li>
+        <li class="nav-item d-none d-sm-inline-block">
+          <a href="presentacion.html" class="nav-link">PRESENTACION</a>
+        </li>
+        <li class="nav-item d-none d-sm-inline-block">
+          <a href="proyectos_realizado.html" class="nav-link">PROYECTOS REALIZADOS</a>
+        </li>
+        <li class="nav-item d-none d-sm-inline-block">
+          <a href="taller.html" class="nav-link">TALLER</a>
+      </ul>
+      <div class="icono-salida">
+        <a href=""> <img src="imagenes_cargadas/salir.jpg" style="max-width: 50%;">
+        </a>
+      </div>
+
+
+    </nav>
+
+
+
+
+  </div>
+
+  <div class="content-wrapper" style="margin-left: 0px;">
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0">Combos</h1>
+          </div><!-- /.col -->
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active">Combos</li>
+            </ol>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card card-primary">
+              <div class="card-header">
+                <h3 class="card-title">formulario</h3>
+              </div>
+              <!-- /.card-header -->
+              <!-- form start -->
+              <form id="formRegistrarLinea">
+                <div class="card-body">
+
+                  <div class="row">
+                    <div class="form-group col-md-3">
+                      <label for="exampleInputEmail1">TITULO</label>
+                      <input type="text" autocomplete="off" class="form-control" id="titulo" name="titulo">
+                    </div>
+
+                    <div class="form-group col-md-3">
+                      <label for="exampleInputPassword1">Descripcion</label>
+                      <input type="text" autocomplete="off" class="form-control" name="descripcion" id="descripcion">
+                    </div>
+
+                    <div class="form-group col-md-3">
+                      <label for="exampleInputPassword1">Precio</label>
+                      <input type="text" autocomplete="off" class="form-control" name="precio" id="precio">
+                    </div>                    
+                  </div>
+
+
+
+                  <hr>
+                  <div class="form-group">
+                    <div class="col-sm-12">
+                      <label class="imagen-tamano" style="position: absolute;z-index: 0">foto 1</label>
+                      <img src="" alt="" id="mostrar_foto1" class="oculto"
+                        style="max-width: 300px;max-height: 300px;z-index: 1;position:relative;">
+
+                    </div>
+                  </div>
+                  <div class="file-loading">
+                    <input type="file" name="foto1" id="foto1" accept="image/*">
+                  </div>
+                  <hr>
+                  <div class="form-group">
+                    <div class="col-sm-12">
+                      <label class="imagen-tamano" style="position: absolute;z-index: 0">Fotos 2</label>
+                      <img src="" alt="" id="mostrar_foto2" class="oculto"
+                        style="max-width: 300px;max-height: 300px;z-index: 1;position:relative;">
+
+                    </div>
+                  </div>
+                  <div class="file-loading">
+                    <input type="file" name="foto2" accept="image/*" id="foto2">
+                  </div>
+                </div>
+                <!-- /.card-body -->
+
+                <div class="card-footer">
+                  <a type="submit" class="btn btn-primary" id="registrarLinea">GUARDAR DATOS</a>
+                  <a type="submit" class="btn btn-danger" id="eliminarLinea">ELIMINAR COMBO</a>
+                </div>
+
+                <input type="hidden" name="accion" id="accion" value="ALTA">
+                <input type="hidden" name="idLinea" id="idLinea">
+
+            </div>
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+
+            <!-- /.card -->
+
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">Listado de combos</h3>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+                <table id="example1" class="table table-bordered table-striped">
+                  <thead>
+                    <tr>
+                      <th>ID</th>
+                      <th>Título</th>
+                      <th>Precio</th>
+                      <th>Descripción</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+
+                  </tbody>
+                  <tfoot>
+                    <tr>
+                      <th>ID</th>
+                      <th>Título</th>
+                      <th>Precio</th>
+                      <th>Descripción</th>
+                    </tr>
+                  </tfoot>
+                </table>
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+          </div>
+          <!-- /.col -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container-fluid -->
+    </section>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+  <!-- jQuery -->
+  <script src="plugins/jquery/jquery.min.js"></script>
+  <!-- jQuery UI 1.11.4 -->
+
+  <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+  <!-- Bootstrap 4 -->
+
+  <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- ChartJS -->
+  <script src="plugins/chart.js/Chart.min.js"></script>
+  <!-- Sparkline -->
+  <script src="plugins/sparklines/sparkline.js"></script>
+  <!-- JQVMap -->
+  <!-- <script src="plugins/jqvmap/jquery.vmap.min.js"></script>
+<script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script> -->
+  <!-- jQuery Knob Chart -->
+  <script src="plugins/jquery-knob/jquery.knob.min.js"></script>
+  <!-- daterangepicker -->
+  <script src="plugins/moment/moment.min.js"></script>
+  <script src="plugins/daterangepicker/daterangepicker.js"></script>
+  <!-- Tempusdominus Bootstrap 4 -->
+  <script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+  <!-- Summernote -->
+  <script src="plugins/summernote/summernote-bs4.min.js"></script>
+  <!-- overlayScrollbars -->
+  <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+  <!-- AdminLTE App -->
+  <script src="dist/js/adminlte.js"></script>
+  <!-- AdminLTE for demo purposes -->
+  <!-- <script src="dist/js/demo.js"></script> -->
+  <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+  <!-- <script src="dist/js/pages/dashboard.js"></script> -->
+
+
+  <script src="dist/js/input-file/fileinput.js"></script>
+  <script src="dist/js/input-file/es.js"></script>
+
+  <script src="dist/js/input-file/piexif.js"></script>
+  <script src="dist/js/input-file/purify.js"></script>
+  <script src="dist/js/input-file/sortable.js"></script>
+  <script src="dist/js/input-file/theme.js"></script>
+
+  <script src="./dist/js/Storage.js"></script>
+  <script src="./dist/js/sesion.js"></script>
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
+
+  <!-- DataTables  & Plugins -->
+<script src="plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script src="plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+<script src="plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+<script src="plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+<script src="plugins/jszip/jszip.min.js"></script>
+<script src="plugins/pdfmake/pdfmake.min.js"></script>
+<script src="plugins/pdfmake/vfs_fonts.js"></script>
+<script src="plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+<script src="plugins/datatables-buttons/js/buttons.print.min.js"></script>
+<script src="plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+
+
+</body>
+
+
+
+
+<script>
+  function createFile(object) {
+    var fileinput = null;
+
+    fileinput = object, initPlugin = function () {
+      fileinput.fileinput({
+        language: "es",
+        allowedFileExtensions: ["png", "jpg", "jpeg", "gif"],
+        maxFileCount: 4,
+        validateInitialCount: false,
+        showUpload: false,
+        removeLabel: "Eliminar archivos"
+      });
+    };
+
+    initPlugin();
+
+    return fileinput;
+  }
+
+  createFile($('#foto1'));
+  createFile($('#foto2'));
+
+
+
+  var formData;
+
+  function setBase64(idInputFile, functionSave = false) {
+
+    var file = document.getElementById(idInputFile)['files'][0];
+    var reader = new FileReader();
+    var baseString;
+
+    reader.onloadend = function () {
+      imagenBase64 = reader.result;
+      if (functionSave) {
+        functionSave(imagenBase64);
+      }
+
+      if ($('#show_' + idInputFile)) {
+        //console.log(imagenBase64);
+        if (imagenBase64 != '') {
+          $('#show_' + idInputFile).attr('src', imagenBase64);
+        } else {
+          $('#show_' + idInputFile).attr('src', '');
+        }
+      }
+
+    };
+
+    if (file) {
+      reader.readAsDataURL(file);
+    }
+
+  }
+
+  $('#registrarLinea').click(function () {
+
+    var accion = $('#accion').val();
+    if (accion == 'ALTA') {
+      registrarLinea();
+    } else {
+      modificarLinea();
+    }
+
+
+  });
+
+
+  function registrarLinea() {
+    formData = new FormData($('#formRegistrarLinea')[0]);
+    $.ajax({
+      type: 'POST',
+      url: './php/request.php?Landing=registrarLinea',
+      data: formData,
+      cache: false,
+      contentType: false,
+      processData: false,
+      beforeSend: function() {
+        $('.loading').attr('style','display:block');
+      },
+      success: function (response) {
+        $('.loading').attr('style','display:none');
+        response = JSON.parse(response);
+        if (!response.error) {
+
+          $.confirm({
+            title: 'Confirmación',
+            content: 'Datos registrados correctamente.',
+            buttons: {
+              Ok: {
+                text: 'Ok',
+                btnClass: 'btn-blue',
+                keys: ['enter', 'shift'],
+                action: function () {
+                  location.reload();
+                }
+              }
+            }
+          });
+
+        } else {
+          $.alert({
+            title: 'Atención : Error',
+            content: 'Verifica los datos ingresados.',
+          });
+        }
+      }
+    });
+  }
+
+  function eliminarLinea()
+  {
+    formData = new FormData($('#formRegistrarLinea')[0]);
+    $.ajax({
+        type: 'POST',
+        url: './php/request.php?Landing=eliminarLinea',
+        data: formData,
+        cache: false,
+        contentType: false,
+        processData: false,
+		beforeSend: function() {
+			$('.loading').attr('style','display:block');
+		},
+        success: function(response) {
+			$('.loading').attr('style','display:none');
+          response = JSON.parse(response);
+            if (!response.error) {
+               
+              $.confirm({
+                  title: 'Confirmación',
+                  content: 'Combo eliminado',
+                  buttons: {
+                      Ok: {
+                          text: 'Ok',
+                          btnClass: 'btn-blue',
+                          keys: ['enter', 'shift'],
+                          action: function(){
+                            location.reload();
+                          }
+                      }
+                  }
+              });
+
+            } else {
+                $.alert({
+                    title: 'Atención : Error',
+                    content: 'Error al eliminar producto.',
+                });
+            }
+        }
+    });    
+  }
+
+  function modificarLinea() {
+    formData = new FormData($('#formRegistrarLinea')[0]);
+    $.ajax({
+      type: 'POST',
+      url: './php/request.php?Landing=modificarLinea',
+      data: formData,
+      cache: false,
+      contentType: false,
+      processData: false,
+      beforeSend: function() {
+        $('.loading').attr('style','display:block');
+      },
+      success: function (response) {
+        $('.loading').attr('style','display:none');
+
+        response = JSON.parse(response);
+        if (!response.error) {
+
+          $.confirm({
+            title: 'Confirmación',
+            content: 'Datos registrados correctamente.',
+            buttons: {
+              Ok: {
+                text: 'Ok',
+                btnClass: 'btn-blue',
+                keys: ['enter', 'shift'],
+                action: function () {
+                  location.reload();
+                }
+              }
+            }
+          });
+
+        } else {
+          $.alert({
+            title: 'Atención : Error',
+            content: 'Verifica los datos ingresados.',
+          });
+        }
+      }
+    });
+  }
+
+  function inputFilesPreview(divshowimagen, imagen64, nameinput, showPreview = false) {
+
+    if (showPreview == false) {
+      $('#' + divshowimagen).attr('src', imagen64);
+      $('#' + divshowimagen).removeClass('oculto');
+    } else {
+      $('#' + divshowimagen).addClass('oculto');
+
+    }
+    $('#' + nameinput).fileinput('destroy');
+    $("#" + nameinput).fileinput({ 'showUpload': false, 'showPreview': showPreview, 'previewFileType': 'any' });
+  }
+
+
+  $(function () { 
+    $("#example1").DataTable({
+      ajax: './php/request.php?Landing=obtenerLineasDatatable',
+      columns: [
+        { "data": "id" },
+        { "data": "titulo" },
+        { "data": "precio" },
+        { "data": "descripcion" }],
+      "responsive": true, "lengthChange": false, "autoWidth": false,
+      // "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+    }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+
+
+    var table = $('#example1').DataTable();
+    $('#example1 tbody').on('click', 'tr', function () {
+      $('#accion').val('MODIFICACION');
+      var data = table.row(this).data();
+      $('#idLinea').val(data.id);
+      $('#titulo').val(data.titulo);
+      $('#precio').val(data.precio);
+      $('#descripcion').val(data.descripcion);
+
+    
+      let initialPreview = [];
+      initialPreview.push("<img class='kv-preview-data file-preview-image' src='./" + data.foto1.substring(1) + "'>");
+          $('#foto1').fileinput("destroy");
+          $('#foto1').fileinput({
+            language: "es",
+            allowedFileExtensions: ["png", "jpg", "jpeg", "gif"],
+            maxFileCount: 4,
+            validateInitialCount: false,
+            showUpload: false,
+            removeLabel: "Eliminar archivos",
+            initialPreview: initialPreview
+          });
+
+          initialPreview = [];
+          initialPreview.push("<img class='kv-preview-data file-preview-image' src='./" + data.foto2.substring(1) + "'>");
+          $('#foto2').fileinput("destroy");
+          $('#foto2').fileinput({
+            language: "es",
+            allowedFileExtensions: ["png", "jpg", "jpeg", "gif"],
+            maxFileCount: 4,
+            validateInitialCount: false,
+            showUpload: false,
+            removeLabel: "Eliminar archivos",
+            initialPreview: initialPreview
+          });      
+
+          $("#titulo").focus();
+    });
+
+  });
+</script>
+<script>
+  $(document).ready(function () {
+
+
+    // var sesion = new StorageUnico("proinseg");
+    // verificarSesion(sesion);
+    $('.icono-salida').click(function () {
+      var sesion = new StorageUnico("proinseg");
+      sesion.sesionObj.eliminarTodosLosGuardados();
+      location.href = '/admin/login.html';
+    });
+
+
+    $('#eliminarLinea').click(function() {   
+        let nombreProduct = $('#titulo').val();     
+        $.confirm({
+          title: 'Atención - Está por eliminar un item.',
+          content: 'Desea eliminar el combo  ' + nombreProduct + ' ?',
+          buttons: {
+              Ok: {
+                  text: 'Ok',
+                  btnClass: 'btn-red',
+                  action: function(){
+                    eliminarLinea();
+                  }
+              },
+              Cancelar : {
+                  text: 'Cancelar',
+                  btnClass: 'btn-blue',
+                  action: function(){
+                    //location.reload();
+                  }
+              }
+          }
+      });
+});
+
+  });
+</script>
+
+</html>

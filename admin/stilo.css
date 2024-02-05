@@ -1,0 +1,16 @@
+.activo {
+    text-decoration: underline;
+    background-color:#5e5e9c47;
+}
+ul {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+}
+.icono-salida{
+    right: 0px;
+    position: absolute;
+    margin-top: -1%;
+    text-align: center;
+}
