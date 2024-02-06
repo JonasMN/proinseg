@@ -33,6 +33,7 @@ body
 
 .card {
     max-width: 700px;
+	border-radius: 15px;
   }
 
   .card-body {
