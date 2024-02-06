@@ -31,6 +31,27 @@ body
 
 }
 
+.card {
+    max-width: 700px;
+  }
+
+  .card-body {
+    padding: 10px; 
+  }
+
+  .card-title {
+    font-size: 1rem; 
+  }
+
+  .card-text {
+    font-size: 0.9rem;
+  }
+
+  .card-img-top {
+    max-height: 300px; 
+    object-fit: contain; 
+  }
+
 #galeria .col-lg-4{   
     padding: 3%;
 }
