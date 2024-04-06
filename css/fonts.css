@@ -1,9 +1,9 @@
 @font-face{
-    font-family: 'suisse';
-    src: url('../fonts/suisseintlmono-bold-webfont.woff2') format('woff2'),
-         url('../fonts/suisseintlmono-bold-webfont.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
+  font-family: 'suisse';
+  src: url('../fonts/NunitoSans-VariableFont_YTLC\,opsz\,wdth\,wght.ttf'),
+       url('') format('woff');
+  font-weight: bold;
+  font-style: normal;
 }
 @font-face{
     font-family: 'suisse';

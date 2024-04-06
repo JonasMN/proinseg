@@ -1,15 +1,15 @@
-* {
+/* * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: 'Rubik', sans-serif;
-  }
+  }*/
   
   body {
     background-color: rgb(247, 247, 247);
     height:100vh;
-    
     justify-content: center;
+    font-weight: bold;
     align-items:center;
     
   }
@@ -53,6 +53,7 @@
     border-radius: 4px;
     display: block;
     width: 70vw;
+    font-weight: bold;
   }
   
   form > textarea{

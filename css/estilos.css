@@ -7,11 +7,10 @@ body
 {
     color: #231F20;
     font-size: 16px;
-    font-weight: 400;
+    font-weight: bold;
     line-height: 1.6;
-    font-family: 'suisse', monospace;
     background: #fff;
-    font-smoothing: antialiased;
+	font-family: 'suisse';
     -webkit-font-smoothing: antialiased;
 }
 
@@ -32,27 +31,34 @@ body
 }
 
 .card {
-    max-width: 700px;
+	transition: 0.5s ease;
+	max-width: 700px;
 	border-radius: 15px;
-  }
+	box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+}
 
-  .card-body {
-    padding: 10px; 
-  }
+.card-body {
+	padding: 10px;
+}
 
-  .card-title {
-    font-size: 1rem; 
-  }
+.card-title {
+	font-size: 1rem;
+}
 
-  .card-text {
-    font-size: 0.9rem;
-  }
+.card-text {
+	font-size: 0.9rem;
+}
 
-  .card-img-top {
-    width: 300px;
+.card-img-top {
+	width: 300px;
 	height: 200px;
-    object-fit: cover; 
-  }
+	object-fit: cover;
+}
+
+.card:hover {
+	transform: scale(1.1);
+	box-shadow: 5px 5px 15px rgba(19, 18, 18, 0.699);
+}
 
 #galeria .col-lg-4{   
     padding: 3%;
@@ -77,16 +83,15 @@ Author: @MatiBrufal
 Author URI: http://matibrufal.com
 */
 
-body{
+/*body{
 	color: #231F20;
 	font-size: 16px;
-	font-weight: 400;
+	font-weight: bold;
 	line-height: 1.6;
-	font-family: 'suisse', monospace;
 	background: #fff;
 	font-smoothing: antialiased;
 	-webkit-font-smoothing: antialiased;
-}
+}*/
 
 .wow{
 	visibility: hidden;
@@ -115,8 +120,7 @@ a:hover{
 h1, h2, h3, h4, h5, h6{
 	margin-bottom: 1em;
 	line-height: 1.5;
-	font-weight: 400;
-	font-family: 'sharp', sans-serif;
+	font-weight: bold;
 }
 
 h1 { font-size: 26px; }
@@ -148,7 +152,7 @@ h6 { font-size: 12px; }
 .btn{
 	padding: 0 16px;
 	font-size: 16px;
-	font-weight: 400;
+	font-weight: bold;
 	line-height: 40px;
 	text-transform: uppercase;
 	border-radius: 0;
@@ -225,7 +229,7 @@ h6 { font-size: 12px; }
 	vertical-align: middle;
 	padding: 0 24px;
 	font-size: 12px;
-	font-weight: 400;
+	font-weight: bold;
 	line-height: 50px;
 	text-transform: uppercase;
 	border-radius: 0;
@@ -278,7 +282,7 @@ h6 { font-size: 12px; }
 	font-size: 15px;
 }
 .title p b {
-	font-weight: 500;
+	font-weight: bold;
 }
 
 .title .subtitle {
@@ -286,7 +290,7 @@ h6 { font-size: 12px; }
 	color: #000;
 	font-size: 15px;
 	line-height: 30px;
-	font-weight: 400;
+	font-weight: bold;
 	text-transform: uppercase;
 }
 
@@ -377,7 +381,7 @@ label{
 	height: auto;
 	color: #222;
 	font-size: 16px;
-	font-weight: 500;
+	font-weight: bold;
 	line-height: 50px;
 	border-radius: 0;
 	border: 1px solid #222;
@@ -402,7 +406,7 @@ label{
 	height: auto;
 	color: #222;
 	font-size: 15px;
-	font-weight: 500;
+	font-weight: bold;
 	line-height: 50px;
 	border-radius: 0;
 	border: 1px solid #222;
@@ -480,7 +484,7 @@ input[type="radio"] ~ label{
 	font-size: 12.8px;
 	line-height: 50px;
 	background: transparent;
-	font-weight: 400;
+	font-weight: bold;
 	padding: 0;
 	text-align: center;
 	box-shadow: none;
@@ -512,7 +516,7 @@ input[type="radio"] ~ label{
 	font-size: 8px;
 	font-size: 16px;
 	text-align: center;
-	font-weight: 400;
+	font-weight: bold;
 	line-height: 40px;
     background: #E8E8E8;
     border-left: 1px solid #4A4A4A;
@@ -600,7 +604,7 @@ input[type="radio"] ~ label{
 	margin: 0;
 	font-size: 22px;
 	line-height: 22px;
-	font-weight: 400;
+	font-weight: bold;
 }
 .banner .title small{
 	font-size: 12px;
@@ -622,7 +626,7 @@ input[type="radio"] ~ label{
 	top: 0;
 	left: 0;
 	width: 100%;
-	font-weight: 400;
+	font-weight: bold;
 	min-height: 60px;
 	background: #fff;
 	transition: 0.5s all;
@@ -716,14 +720,12 @@ input[type="radio"] ~ label{
 	margin: 0;
 	font-size: 14px;
 	text-transform: uppercase;
-	font-family: 'suisse', monospace;
 }
 .header .navigation .menu .submenu ul li a{
 	display: block;
 	padding: 0;
 	color: #fff;
 	font-size: 24px;
-	font-family: 'sharp', sans-serif;
 }
 
 .header .account{
@@ -742,7 +744,7 @@ input[type="radio"] ~ label{
 	height: 32px;
 	color: #4C4C4C;
 	font-size: 15px;
-	font-weight: 500;
+	font-weight: bold;
 	line-height: 32px;
 	text-align: center;
 	background: #fff;
@@ -844,8 +846,7 @@ body.fixed{
 		color: #fff;
 		font-size: 14px;
 		text-shadow: none;
-		font-family: 'suisse', monospace;
-		font-weight: 400;
+		font-weight: bold;
 		opacity: 1;
 		cursor: pointer;
 	}
@@ -1136,7 +1137,7 @@ body.fixed{
 .page.home .categories .feed article .seemore{
 	display: block;
 	padding-top: 20px;
-	font-weight: 400;
+	font-weight: bold;
 	text-align: right;
 }
 
@@ -1505,12 +1506,12 @@ body.fixed{
 	margin: 0;
 	font-size: 15px;
 	line-height: 24px;
-	font-weight: 400;
+	font-weight: bold;
 }
 .feed-products article .price{
 	margin: 0;
 	text-align: right;
-	font-weight: 400;
+	font-weight: bold;
 	font-size: 15px;
 	color: #272223 !important;
 }
@@ -1567,7 +1568,7 @@ body.fixed{
 	margin: 0;
 	text-align: center;
 	text-transform: uppercase;
-	font-weight: 500;
+	font-weight: bold;
 }
 .archive.store .banner .filter .open-filter i{
 	position: absolute;
@@ -1807,7 +1808,7 @@ body.fixed{
     margin: 0;
     font-size: 28px;
     line-height: 32px;
-    font-weight: 500;
+    font-weight: bold;
     letter-spacing: -1px;
     text-indent: -1px;
 }
@@ -1840,8 +1841,7 @@ body.fixed{
 .single.store .product-data .summary .meta .price{
 	font-size: 24px;
 	line-height: 32px;
-	font-weight: 500;
-	font-family: 'sharp', serif;
+	font-weight: bold;
 }
 
 .single.store .product-data .summary .variations{
@@ -1852,7 +1852,7 @@ body.fixed{
 }
 .single.store .product-data .summary .variations label{
 	text-transform: uppercase;
-	font-weight: 400;
+	font-weight: bold;
 	font-size: 16px;
 	margin: 0;
 }
@@ -1874,8 +1874,7 @@ body.fixed{
 .single.store .product-data .summary .single_variation_wrap .woocommerce-variation .price{
 	font-size: 24px;
 	line-height: 32px;
-	font-weight: 500;
-	font-family: 'sharp', serif;
+	font-weight: bold;
 }
 
 .single.store .product-data .summary .buttons .btn{
@@ -2186,7 +2185,7 @@ body.fixed{
 	letter-spacing: -0.46px;
 	line-height: 24px;
 	font-size: 12px;
-	font-weight: 500;
+	font-weight: bold;
 	padding: 15px;
 	border-top: 1px solid #E7E7E7;
 	border-bottom: 1px solid #E7E7E7;
@@ -2200,11 +2199,11 @@ body.fixed{
 	padding: 15px;
 	font-size: 15px;
 	line-height: 20px;
-	font-weight: 300;
+	font-weight: bold;
 	color: #272223;
 }
 .table tr td.name{
-	font-weight: 400;
+	font-weight: bold;
 }
 
 .table tr td .thumbnail{
@@ -2268,7 +2267,7 @@ body.fixed{
 }
 .page.store form .form-row .required{
     color: red;
-    font-weight: 700;
+    font-weight: bold;
     border: 0 !important;
     text-decoration: none;
     visibility: hidden;
@@ -2343,7 +2342,6 @@ body.fixed{
 }
 .password-input .show-password-input:after{
 	content:"";
-	font-family: 'WooCommerce';
 }
 
 
@@ -2358,7 +2356,7 @@ body.fixed{
 	margin: 0;
 	color: #fff;
 	font-size: 15px;
-	font-weight: 500;
+	font-weight: bold;
 	background: #000;
 	list-style: none;
 }
@@ -2387,7 +2385,7 @@ body.fixed{
 	height: 20px;
 	padding: 0;
 	line-height: 20px;
-	font-weight: 500;
+	font-weight: bold;
 	background: transparent;
 }
 .store .woocommerce-message .button:hover,
@@ -2425,14 +2423,14 @@ table.shop_table{
 }
 table.shop_table th{
 	padding: 10px 0;
-	font-weight: 500;
+	font-weight: bold;
 	font-size: 12px;
 	color: #adadad;
 	text-transform: uppercase;
 }
 table.shop_table td{
 	padding: 10px 0;
-	font-weight: 400;
+	font-weight: bold;
 	font-size: 16px;
 	border-top: 1px solid rgba(0,0,0,0.1);
 }
@@ -2463,7 +2461,7 @@ table.shop_table td.product-thumbnail .data-product{
 	padding-left: 20px;
 }
 table.shop_table td.product-thumbnail .data-product .product-title {
-	font-weight: 700;
+	font-weight: bold;
 	font-size: 18px;
 	line-height: 42px;
 }
@@ -2483,7 +2481,6 @@ table.shop_table td.product-quantity input {
 table.shop_table tr.order-total td{
 	font-size: 36px;
 	font-weight: bold;
-	font-family: 'sharp', sans-serif;
 }
 
 table.shop_table .product-remove a:hover{
@@ -2540,7 +2537,7 @@ table.shop_table .product-remove a:hover{
 	    content: attr(data-title) ": ";
 		display: inline-block;
 		vertical-align: top;
-	    font-weight: 700;
+	    font-weight: bold;
 	}
 	table.shop_table_responsive tr td.actions::before,
 	table.shop_table_responsive tr td.product-thumbnail::before,
@@ -2566,12 +2563,12 @@ table.shop_table .product-remove a:hover{
 	margin: 6px 0;
 	font-size: 52px;
 	line-height: 52px;
-	font-weight: 500;
+	font-weight: bold;
 	text-transform: initial;
 }
 .store.account .data-user p{
 	margin: 0;
-	font-weight: 400;
+	font-weight: bold;
 	letter-spacing: -0.69px;
 	line-height: 24px;
 }
@@ -2611,7 +2608,7 @@ table.shop_table .product-remove a:hover{
 	margin: 0 15px;
 	color: #000;
 	font-size: 12px;
-	font-weight: 400;
+	font-weight: bold;
 	text-transform: uppercase;
 }
 .store.account .tab_menu li a:after{
@@ -2627,7 +2624,7 @@ table.shop_table .product-remove a:hover{
 .store.account .tab_menu li.is-active a,
 .store.account .tab_menu li.active a{
 	color: #000;
-	font-weight: 500;
+	font-weight: bold;
 }
 .store.account .tab_menu li.is-active a:after,
 .store.account .tab_menu li.active a:after,
@@ -2686,7 +2683,7 @@ table.shop_table .product-remove a:hover{
 .store.account .dashboard-menu article h2{
 	margin: 0;
 	font-size: 21px;
-	font-weight: 500;
+	font-weight: bold;
 	padding: 6px;
 	border-bottom: 1px solid #E7E7E7;
 }
@@ -2749,7 +2746,7 @@ table.shop_table .product-remove a:hover{
 .customer_login .divisor{
 	position: relative;
 	font-size: 15px;
-	font-weight: 400;
+	font-weight: bold;
 	text-align: center;
 	margin: 30px 0;
 }
