@@ -14,6 +14,7 @@
 	<link rel="icon" type="image/png" sizes="16x16" href="https://elyeite.com/wp-content/themes/elyeite/assets/favicon/favicon-16x16.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="https://elyeite.com/wp-content/themes/elyeite/assets/favicon/favicon-32x32.png">
 	<link rel="apple-touch-icon" href="https://elyeite.com/wp-content/themes/elyeite/assets/favicon/apple-touch-icon.png">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
     <!-- CSS -->
 
@@ -144,46 +145,39 @@ img.emoji {
 	<header class="header clearfix">
 		<div class="navbar">
 			<div class="navbar-left">
+				<div class="menu-icon" id="menu-toggle">
+					<i class="fas fa-bars"></i>
+				</div>
 				<nav class="navigation">
-
+					<div class="close-btn">X</div>
 					<ul class="menu list-unstyled">
-						<li class="menu-products">
+						<!-- <li class="menu-products">
 							<a href="#productoID">Productos</a>
-	
 						</li>
-						<li class="menu-collections ">
+						<li class="menu-collections">
 							<a href="#" data-open="submenu-shop">Servicios</a>
 							<div class="submenu">
 								<div class="container">
-									<div class="close">
-										X CERRAR
-									</div>
 	
 									<h4>Servicios</h4>
 	
 									<ul class="list-unstyled">
-										<li id="menu- m-305"
-											class="menu-item menu-item-type-taxonomy menu-item-object-product_collection menu- m-305">
+										<li id="menu-m-305" class="menu-item menu-item-type-taxonomy menu-item-object-product_collection menu-m-305">
 											<a href="#">Servicio 1</a>
 										</li>
-										<li id="menu- m-306"
-											class="menu-item menu-item-type-taxonomy menu-item-object-product_collection menu- m-306">
+										<li id="menu-m-306" class="menu-item menu-item-type-taxonomy menu-item-object-product_collection menu-m-306">
 											<a href="#">Servicio 2</a>
 										</li>
 									</ul>
-	
 								</div>
 							</div>
-						</li>
-						<li id="menu-item-79"
-							class="menu-contact menu-item menu-item-type-post_type menu-item-object-page menu-item-79"><a
-								href="contacto.html">Contacto</a></li>
+						</li> -->
+						<li id="menu-item-79" class="menu-contact menu-item menu-item-type-post_type menu-item-object-page menu-item-79"><a href="contacto.html">Contacto</a></li>
 					</ul>
-	
 				</nav>
 			</div>
 			<div class="navbar-center">
-					<img src="img/logo_proinseg.svg" alt="ProinSeg" class="">
+				<img src="img/logo_proinseg.svg" alt="ProinSeg" class="">
 			</div>
 			<div class="navbar-right">Right Content</div>
 		</div>
@@ -405,4 +399,21 @@ var sb_instagram_js_options = {"font_method":"svg","resized_url":"https:\/\/elye
 <script type='text/javascript' src='https://elyeite.com/wp-content/plugins/instagram-feed/js/sbi-scripts.min.js?ver=2.7' id='sb_instagram_scripts-js'></script>
 
 </body>
+<script>
+	document.addEventListener("DOMContentLoaded", function() {
+	var closeButton = document.querySelector('.close-btn');
+	
+	closeButton.addEventListener('click', function() {
+		document.querySelector('.navigation').classList.remove('active');
+	});
+	
+	var menuIcon = document.querySelector('.menu-icon');
+	
+	menuIcon.addEventListener('click', function() {
+		var navigation = document.querySelector('.navigation');
+		navigation.classList.toggle('active');
+	});
+});
+
+</script>
 </html>

@@ -21,6 +21,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@1,300;1,400&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
     <script src="https://use.fontawesome.com/4adfa6aed0.js"></script>
 
@@ -38,46 +39,39 @@
 			<header class="header clearfix">
 				<div class="navbar">
 					<div class="navbar-left">
+						<div class="menu-icon" id="menu-toggle">
+							<i class="fas fa-bars"></i>
+						</div>
 						<nav class="navigation">
-		
+							<div class="close-btn">X</div>
 							<ul class="menu list-unstyled">
-								<li class="menu-products">
+								<!-- <li class="menu-products">
 									<a href="#productoID">Productos</a>
-			
 								</li>
-								<li class="menu-collections ">
+								<li class="menu-collections">
 									<a href="#" data-open="submenu-shop">Servicios</a>
 									<div class="submenu">
 										<div class="container">
-											<div class="close">
-												X CERRAR
-											</div>
 			
 											<h4>Servicios</h4>
 			
 											<ul class="list-unstyled">
-												<li id="menu- m-305"
-													class="menu-item menu-item-type-taxonomy menu-item-object-product_collection menu- m-305">
+												<li id="menu-m-305" class="menu-item menu-item-type-taxonomy menu-item-object-product_collection menu-m-305">
 													<a href="#">Servicio 1</a>
 												</li>
-												<li id="menu- m-306"
-													class="menu-item menu-item-type-taxonomy menu-item-object-product_collection menu- m-306">
+												<li id="menu-m-306" class="menu-item menu-item-type-taxonomy menu-item-object-product_collection menu-m-306">
 													<a href="#">Servicio 2</a>
 												</li>
 											</ul>
-			
 										</div>
 									</div>
-								</li>
-								<li id="menu-item-79"
-									class="menu-contact menu-item menu-item-type-post_type menu-item-object-page menu-item-79"><a
-										href="contacto.html">Contacto</a></li>
+								</li> -->
+								<li id="menu-item-79" class="menu-contact menu-item menu-item-type-post_type menu-item-object-page menu-item-79"><a href="contacto.html">Contacto</a></li>
 							</ul>
-			
 						</nav>
 					</div>
 					<div class="navbar-center">
-							<img src="img/logo_proinseg.svg" alt="ProinSeg" class="">
+						<img src="img/logo_proinseg.svg" alt="ProinSeg" class="">
 					</div>
 					<div class="navbar-right">Right Content</div>
 				</div>
@@ -175,5 +169,22 @@
 	</footer> -->
 
 </body>
+<script>
+	document.addEventListener("DOMContentLoaded", function() {
+	var closeButton = document.querySelector('.close-btn');
+	
+	closeButton.addEventListener('click', function() {
+		document.querySelector('.navigation').classList.remove('active');
+	});
+	
+	var menuIcon = document.querySelector('.menu-icon');
+	
+	menuIcon.addEventListener('click', function() {
+		var navigation = document.querySelector('.navigation');
+		navigation.classList.toggle('active');
+	});
+});
+
+</script>
 
 </html>

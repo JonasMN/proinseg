@@ -80,6 +80,97 @@ body
     max-width: 50%;
 }
 
+.close-btn,
+.menu-icon {
+    display: none;
+}
+
+
+@media only screen and (max-width: 767px) {
+
+	.menu-icon {
+        display: block;
+        cursor: pointer; 
+		margin-left: -138px;
+    }
+
+	.close-btn {
+		display: block;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        font-size: 24px;
+        color: #000;
+    }
+    .navbar-left {
+        display: block !important;
+    }
+
+    .navbar-center {
+        flex: 1;
+        text-align: right;
+    }
+
+	.navbar-center img {
+        max-width: 300px;
+        width: auto;
+        margin: 0 auto;
+        margin-left: -12px; 
+    }
+
+    .navbar-right {
+        display: none;
+    }
+
+    .navigation {
+        display: none;
+        position: fixed;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 60px);
+        background-color: #fff;
+        z-index: 999;
+        overflow-y: auto;
+    }
+
+    .navigation.active {
+        display: block;
+    }
+
+    .navigation ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .navigation li {
+        padding: 10px 0;
+        border-bottom: 1px solid #eee; 
+    }
+
+    .navigation a {
+        display: block;
+        padding: 10px 20px;
+        color: #000;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+    }
+
+    .navigation a:hover {
+        background-color: #f0f0f0;
+    }
+
+    .navigation .submenu {
+        display: none;
+        padding-left: 20px;
+    }
+
+    .navigation .submenu.active {
+        display: block; 
+    }
+}
 
 #galeria .col-lg-4{   
     padding: 3%;
@@ -95,24 +186,6 @@ body
     color: #fff;
     overflow: hidden;
 }
-
-/*
-Theme Name: El Yeite
-Theme URI: http://elyeite.com.ar
-Version: 1.0
-Author: @MatiBrufal
-Author URI: http://matibrufal.com
-*/
-
-/*body{
-	color: #231F20;
-	font-size: 16px;
-	font-weight: bold;
-	line-height: 1.6;
-	background: #fff;
-	font-smoothing: antialiased;
-	-webkit-font-smoothing: antialiased;
-}*/
 
 .wow{
 	visibility: hidden;
@@ -690,65 +763,6 @@ input[type="radio"] ~ label{
 .header.active .nav-menu .menu-line:nth-child(3) { transform: rotate(-45deg); width: 30px; margin-top: -11px; }
 .header.active .nav-menu .menu-line:nth-child(2) { opacity: 0; }
 
-.header .navigation{
-	display: none;
-	align-items: center;
-	justify-content: center;
-	position: absolute;
-	top: 60px;
-	left: 0;
-	width: 100%;
-	height: calc(100vh - 60px);
-	height: calc(var(--vh, 1vh) * 100 - 60px);
-	margin: 0;
-	background: #fff;
-	overflow: auto;
-}
-.header.active .navigation{
-	display: block;
-}
-
-.header .navigation .menu {
-	margin: 0;
-}
-.header .navigation .menu > li > a{
-	position: relative;
-	display: block;
-	padding: 15px;
-	font-size: 18px;
-	text-align: left;
-	color: #231F20;
-	letter-spacing: -0.53px;
-	border-bottom: 1px solid #eee;
-}
-.header .navigation .menu > li > a:hover,
-.header .navigation .menu > li.current-menu-item > a,
-.header .navigation .menu > li.active > a{
-	color: #000000;
-}
-
-.header .navigation .menu .submenu{
-	display: none;
-	padding: 15px 0;
-	background: #000000;
-	color: #fff;
-}
-.header .navigation .menu .active .submenu{
-	display: block;
-}
-
-.header .navigation .menu .submenu h4{
-	margin: 0;
-	font-size: 14px;
-	text-transform: uppercase;
-}
-.header .navigation .menu .submenu ul li a{
-	display: block;
-	padding: 0;
-	color: #fff;
-	font-size: 24px;
-}
-
 .header .account{
 	margin: 0 0 0 auto;
 	order: 3;
@@ -785,17 +799,11 @@ body.fixed{
     -webkit-animation: slideInDown 0.3s ease-out;
     -moz-animation: slideInDown 0.3s ease-out;
 }
-.header.fixed.active .navigation{
-	top: 60px;
-	height: calc(100vh - 60px);
-}
+
 .header.fixed .account .search .submenu{
 	top: 60px;
 }
 
-.header .navigation .menu .submenu .close{
-	display: none;
-}
 
 @media screen and (min-width: 992px){
 	.header .nav-menu {
@@ -805,92 +813,6 @@ body.fixed{
 	.header .logo{
 		width: 20%;
 		order: 2;
-	}
-
-	.header .navigation {
-		order: 1;
-		display: block;
-		position: initial;
-		top: auto;
-		left: auto;
-		height: auto;
-		text-align: left;
-		background: transparent;
-		overflow: initial;
-	}
-	.header .navigation ul{
-		display: inline-block;
-		vertical-align: middle;
-	}
-	.header .navigation .menu{
-		margin: 0;
-		z-index: 1;
-	}
-	.header .navigation .menu li{
-		display: inline-block;
-		vertical-align: middle;
-	}
-	.header .navigation .menu > li > a{
-		border-bottom: 0;
-	}
-	.header .navigation .menu li a{
-		padding: 20px 10px;
-		font-size: 16px;
-		text-align: left;
-	}
-
-	.header .navigation .menu .submenu{
-		display: none;
-		position: absolute;
-		top: 65px;
-		left: 0;
-		width: 100vw;
-		height: calc(100vh - 65px);
-		padding: 50px 0;
-		text-align: left;
-		box-shadow: 0 4px 5px 0 rgba(0,0,0,0.08);
-		overflow: auto;
-	}
-	.header .navigation .menu .active .submenu,
-	.header .navigation .menu .active:hover .submenu{
-		display: block;
-		-webkit-animation: fadeIn 0.3s ease-out;
-		-moz-animation: fadeIn 0.3s ease-out;
-	}
-
-	.header .navigation .menu .submenu .close{
-		display: block;
-		position: absolute;
-		top: 55px;
-		right: 70px;
-		color: #fff;
-		font-size: 14px;
-		text-shadow: none;
-		font-weight: bold;
-		opacity: 1;
-		cursor: pointer;
-	}
-	.header .navigation .menu .submenu ul li{
-		display: block;
-	}
-	.header .navigation .menu .submenu ul li a{
-		display: inline-block;
-		position: relative;
-		font-size: 36px;
-	}
-	.header .navigation .menu .submenu ul li a:after{
-		content: '';
-		position: absolute;
-		bottom: 0;
-		left: 50%;
-		width: 0;
-		height: 4px;
-		background: #fff;
-		transition: 0.3s all;
-	}
-	.header .navigation .menu .submenu ul li a:hover:after{
-		left: 0;
-		width: 100%;
 	}
 
 	/* Header > Account */
@@ -933,16 +855,6 @@ body.fixed{
 	}
 
 }
-
-@media screen and (max-width: 991px){
-	.header .navigation .menu > li a:hover,
-	.header .navigation .menu > li.current-menu-item a,
-	.header .navigation .menu > li.active a{
-		color:#fff;
-		background: #000000;
-	}
-}
-
 /* Section */
 
 .section{
