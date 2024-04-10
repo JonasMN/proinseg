@@ -86,7 +86,7 @@ body
 }
 
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 992px) {
 
 	.menu-icon {
         display: block;
