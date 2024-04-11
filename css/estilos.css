@@ -868,9 +868,16 @@ body.fixed{
 	padding: 50px 0;
 }
 
+
+.page .content article .thumbnail{
+	border-radius: 7px;
+	border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
 .page .content article {
 	max-width: 768px;
 	margin: 0 auto;
+	border-radius: 7px;
 }
 
 @media screen and (min-width: 992px){
@@ -1372,7 +1379,6 @@ body.fixed{
 }
 .feed-products article .thumbnail{
 	position: relative;
-	background-color: #FAF6EE;
 	text-align: center;
 	overflow: hidden;
 	transition: 0.3s all;
