@@ -152,7 +152,7 @@
 
 			<!-- Feed -->
 			<section class="content">
-				<center id="sinProductos"><h1>Por los momentos no tenemos productos disponibles para esta categoría.</h1></center>
+				<center id="sinProductos" style="position: relative;  z-index: 9998; display: none;"><h1>Por los momentos no tenemos productos disponibles para esta categoría.</h1></center>
 				<div class="container">
 
 					<div class="col-12 col-md-6 col-lg-4 col-xl-3 my-3 wow fadeIn item-1 " id="divBaseProductos"
@@ -172,7 +172,7 @@
 								<ul class="data list-unstyled">
 									<li>
 										<h2 class="woocommerce-loop-product__title" id="h1Nombre"></h2>
-										<span class="subtitle">&nbsp</span>
+										<span class="subtitle"></span>
 									</li>
 									<li>
 
@@ -198,6 +198,11 @@
 				</div>
 			</section>
 		</div>
+
+		<div id="loading" style="display: none;">
+			<i class="fas fa-spinner fa-spin"></i>
+		</div>
+		
 	</main>
 
 	<footer class="footer">
@@ -291,33 +296,42 @@
     });
 
 	function obtenerProductos() {
-		$.ajax({
-			type: 'POST',
-			url: './admin/php/request.php?Productos=listarProductosIndex&categoria=' + removeAccents(c.toLocaleLowerCase()),
-			//url: './admin/php/request.php?Productos=listarProductosIndex&categoria=Camaras',
-			dataType: 'JSON',
-			success: function (response) {
-				console.log(response);
-				if (typeof response === 'object') {
-					for (let i = 0; i < response.length; i++) {
-						const element = response[i];
-						let divBase = $('#divBaseProductos').clone();
-						$(divBase).addClass('');
-						$(divBase).attr('style', 'display:block');
-						$(divBase).find('#h1Nombre').text(element.nombre);
-						$(divBase).find('#precioProducto').text(element.precio);
+    $('#loading').show();
 
-						$(divBase).find('#hrefProducto').attr('href','detalle_producto.html?id=' + element.id);
-						$(divBase).find('#imgProducto').attr('href','detalle_producto.html?id=' + element.id);
-						$(divBase).find('#imgProducto').attr('style','background-image: url("admin'+ element.foto_index.substring(1) +'")');
-						$('#divPadreProductos').append(divBase);
-						$('#sinProductos').attr('style','display:none');
-					}
-				}
-			}
-		});
+    $.ajax({
+        type: 'POST',
+        url: './admin/php/request.php?Productos=listarProductosIndex&categoria=' + removeAccents(c.toLocaleLowerCase()),
+        dataType: 'JSON',
+        success: function (response) {
+            $('#loading').hide();
 
-	}
+            if (typeof response === 'object' && response.length > 0) {
+                $('#sinProductos').hide();
+                for (let i = 0; i < response.length; i++) {
+                    const element = response[i];
+                    let divBase = $('#divBaseProductos').clone();
+                    $(divBase).addClass('');
+                    $(divBase).attr('style', 'display:block');
+                    $(divBase).find('#h1Nombre').text(element.nombre);
+                    $(divBase).find('#precioProducto').text(element.precio);
+
+                    $(divBase).find('#hrefProducto').attr('href','detalle_producto.html?id=' + element.id);
+                    $(divBase).find('#imgProducto').attr('href','detalle_producto.html?id=' + element.id);
+                    $(divBase).find('#imgProducto').attr('style','background-image: url("admin'+ element.foto_index.substring(1) +'")');
+                    $('#divPadreProductos').append(divBase);
+                }
+            } else {
+                $('#sinProductos').show();
+                $('#divPadreProductos').empty();
+            }
+        },
+        error: function () {
+            $('#loading').hide();
+            $('#sinProductos').html('<h1>Error al cargar los productos. Inténtalo de nuevo más tarde.</h1>').show();
+        }
+    });
+}
+
 
 
 	const removeAccents = (str) => {
