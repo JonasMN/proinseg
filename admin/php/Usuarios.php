@@ -17,28 +17,28 @@ class Usuarios {
 
     public function login($request)
     {
-        $query = 'SELECT clave,nombre FROM usuarios WHERE correo = "'. $request['correo'] .'";';
-        $datosUsuario =  JSON_DECODE($this->db->query($query));
+        $query = 'SELECT clave, nombre FROM usuarios WHERE correo = "'. $request['correo'] .'";';
+        $datosUsuario = JSON_DECODE($this->db->query($query));
         $response = '';
-        if(count($datosUsuario) > 0)
-        {
+        if (count($datosUsuario) > 0) {
             $pwd = $request['clave'];
-            $pwd_peppered = hash_hmac("sha256", $pwd, $this->pepper);
             $pwd_hashed = $datosUsuario[0]->clave;
-            if (password_verify($pwd_peppered, $pwd_hashed)) {
+            
+            if (password_verify($pwd, $pwd_hashed)) {
                 $response = array('error' => false, 'mensaje' => 'Datos correctos' , 'usuario' => $datosUsuario[0]->nombre);
+            } else {
+                $response = array('error' => true, 'mensaje' => 'Contraseña incorrecta.');
             }
-            else {
-                $response = array('error' => true, 'mensaje' => '-No existe usuario con los datos ingresados.');
-            }
-        }else 
-        {
+        } else {
             $response = array('error' => true, 'mensaje' => 'No existe usuario con los datos ingresados.');
         }
-
+    
         return json_encode($response);
     }
 
+
+
+    
     public function registrar($request)
     {
         
