@@ -12,6 +12,7 @@ class Usuarios {
     private $pepper = "c1isvFdxMDdmjOlvxpecFw";
     function __construct() {
       $this->db =  new Db();
+      $this->db->createUserIfNotExists("user", "user@example.com", "123");
     } 
 
     public function login($request)
