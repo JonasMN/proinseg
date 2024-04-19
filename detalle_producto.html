@@ -264,9 +264,13 @@
 
                                     <div class="meta">
                                         <p>Precio</p>
-                                        <p id="precio" class="price"><span class="woocommerce-Price-amount
-                                                    amount"><bdi><span
-                                                        class="woocommerce-Price-currencySymbol"></span></bdi></span>
+                                        <p id="precio" class="price">$
+                                            <span class="woocommerce-Price-amount amount">
+                                                <bdi>
+                                                    <span class="woocommerce-Price-currencySymbol">
+                                                    </span>
+                                                </bdi>
+                                            </span>
                                         </p>
                                     </div>
 
@@ -792,7 +796,8 @@
                             if (json.length > 0) {
                                 $('#titulo').text(json['0'].nombre);
                                 $('#descripcion').text(json['0'].descripcion);
-                                $('#precio').text(json['0'].precio);
+                                $('#precio').text('$ ' + json['0'].precio);
+
         
                                 const img = new Image();
                                 img.src = './admin' + json['0'].foto_index;

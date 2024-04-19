@@ -75,6 +75,9 @@ body
     flex: 1;
     text-align: center;
 }
+.navbar-right {
+	display: none;
+}
 
 .navbar-center img {
     max-width: 50%;
