@@ -765,6 +765,8 @@
     <script type='text/javascript'
         src='https://elyeite.com/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart-variation.min.js?ver=4.9.2'
         id='wc-add-to-cart-variation-js'></script>
+
+
         <script type='text/javascript'>
             document.addEventListener("DOMContentLoaded", function () {
                 $('#loading').show();
@@ -774,50 +776,74 @@
                         prevEl: '.swiper-button-prev',
                     },
                 });
-        
+
                 function inicializarSwiper() {
                     swiper.update();
                 }
-        
                 mostrarDatosProducto();
-        
+
                 function mostrarDatosProducto() {
                     const queryString = window.location.search;
                     const urlParams = new URLSearchParams(queryString);
                     let id = urlParams.get("id");
-        
+
                     const http = new XMLHttpRequest();
                     const url = 'admin/php/request.php?Productos=obtenerProductosPorId&id=' + id;
-        
+
                     http.onreadystatechange = function () {
                         if (this.readyState == 4 && this.status == 200) {
                             let json = JSON.parse(this.responseText);
-        
                             if (json.length > 0) {
                                 $('#titulo').text(json['0'].nombre);
                                 $('#descripcion').text(json['0'].descripcion);
                                 $('#precio').text('$ ' + json['0'].precio);
+                                var swiper = new Swiper('.swiper-container', {});
 
-        
-                                const img = new Image();
-                                img.src = './admin' + json['0'].foto_index;
-                                img.onload = function () {
+                                const imgPrincipal = new Image();
+                                imgPrincipal.src = './admin' + json['0'].foto_index;
+                                imgPrincipal.onload = function () {
                                     $('#loading').hide();
                                     $("#datosProducto").show();
-                                    swiper.appendSlide('<div class="swiper-slide"><img src="' + img.src + '"></div>');
+                                    swiper.appendSlide('<div class="swiper-slide"><img src="' + imgPrincipal.src + '"></div>');
                                     swiper.navigation.update();
                                 };
+
+                                const carpetaFotos = json['0'].carpeta_fotos;
+                                if (carpetaFotos) {
+                                    const urlCarpetaFotos = './admin' + carpetaFotos;
+                                    const httpImagenesAdicionales = new XMLHttpRequest();
+                                    httpImagenesAdicionales.onreadystatechange = function () {
+                                        if (this.readyState == 4 && this.status == 200) {
+                                            const responseText = this.responseText;
+                                            const parser = new DOMParser();
+                                            const htmlDocument = parser.parseFromString(responseText, 'text/html');
+                                            const imageLinks = htmlDocument.querySelectorAll('a[href$=".jpg"]');
+
+                                            imageLinks.forEach(function (link) {
+                                                const imgSrc = urlCarpetaFotos + link.getAttribute('href');
+                                                const img = new Image();
+                                                img.src = imgSrc;
+                                                img.onload = function () {
+                                                    swiper.appendSlide('<div class="swiper-slide"><img src="' + img.src + '"></div>');
+                                                    swiper.navigation.update();
+                                                };
+                                            });
+                                        }
+                                    };
+                                    httpImagenesAdicionales.open("GET", urlCarpetaFotos);
+                                    httpImagenesAdicionales.send();
+                                }
                             } else {
                                 $('#loading').hide();
                                 $('#datosProducto').html('<div id="mensajeError">Error al cargar los productos. Inténtalo de nuevo más tarde.</div>').show();
                             }
                         }
                     }
-        
                     http.open("GET", url);
                     http.send();
                 }
-            });
+            })
+
         </script>
         
         
@@ -1033,7 +1059,7 @@
 
 
             const http = new XMLHttpRequest();
-            const url = 'https://jonasmn.github.io/proinseg/admin/php/request.php?Productos=obtenerProductosPorId&id=' + id;
+            const url = 'admin/php/request.php?Productos=obtenerProductosPorId&id=' + id;
 
             http.onreadystatechange = function () {
                 if (this.readyState == 4 && this.status == 200) {
