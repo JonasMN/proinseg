@@ -85,7 +85,7 @@ class Landing {
                 $fecha = date_create();
 
               
-                $nuevaCarpeta = '../imagenes_cargadas/'.date_timestamp_get($fecha);
+                $nuevaCarpeta = '/imagenes_cargadas/'.date_timestamp_get($fecha);
                 if(!mkdir($nuevaCarpeta, 0777, true)) {
                     die('Fallo al crear las carpetas...');
                 }else 
@@ -142,7 +142,7 @@ class Landing {
                 $fecha = date_create();
 
               
-                $nuevaCarpeta = '../imagenes_cargadas/'.date_timestamp_get($fecha);
+                $nuevaCarpeta = '/imagenes_cargadas/'.date_timestamp_get($fecha);
                 if(!mkdir($nuevaCarpeta, 0777, true)) {
                     die('Fallo al crear las carpetas...');
                 }else 
@@ -199,7 +199,7 @@ class Landing {
                 $fecha = date_create();
 
               
-                $nuevaCarpeta = '../imagenes_cargadas/'.date_timestamp_get($fecha);
+                $nuevaCarpeta = '/imagenes_cargadas/'.date_timestamp_get($fecha);
                 if(!mkdir($nuevaCarpeta, 0777, true)) {
                     die('Fallo al crear las carpetas...');
                 }else 
@@ -307,7 +307,7 @@ class Landing {
                 $fecha = date_create();
 
               
-                $nuevaCarpeta = '../imagenes_cargadas/'.date_timestamp_get($fecha);
+                $nuevaCarpeta = '/imagenes_cargadas/'.date_timestamp_get($fecha);
                 if(!mkdir($nuevaCarpeta, 0777, true)) {
                     die('Fallo al crear las carpetas...');
                 }else 
@@ -366,7 +366,7 @@ class Landing {
                 $fecha = date_create();
 
               
-                $nuevaCarpeta = '../imagenes_cargadas/'.date_timestamp_get($fecha);
+                $nuevaCarpeta = '/imagenes_cargadas/'.date_timestamp_get($fecha);
                 if(!mkdir($nuevaCarpeta, 0777, true)) {
                     die('Fallo al crear las carpetas...');
                 }else 
@@ -428,7 +428,7 @@ class Landing {
                 $fecha = date_create();
 
               
-                $nuevaCarpeta = '../imagenes_cargadas/'.date_timestamp_get($fecha);
+                $nuevaCarpeta = '/imagenes_cargadas/'.date_timestamp_get($fecha);
                 if(!mkdir($nuevaCarpeta, 0777, true)) {
                     die('Fallo al crear las carpetas...');
                 }else 

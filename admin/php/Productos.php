@@ -73,7 +73,7 @@ class Productos {
                 $fecha = date_create();
 
               
-                $nuevaCarpeta = '../imagenes_cargadas/'.date_timestamp_get($fecha);
+                $nuevaCarpeta = '/imagenes_cargadas/'.date_timestamp_get($fecha);
                 if(!mkdir($nuevaCarpeta, 0777, true)) {
                     die('Fallo al crear las carpetas...');
                 }else 
@@ -167,7 +167,7 @@ class Productos {
                 $fecha = date_create();
 
                 $error = false;
-                $nuevaCarpeta = '../imagenes_cargadas/'.date_timestamp_get($fecha);
+                $nuevaCarpeta = '/imagenes_cargadas/'.date_timestamp_get($fecha);
                 if(!mkdir($nuevaCarpeta, 0777, true)) {
                     die('Fallo al crear las carpetas...');
                 }else 
