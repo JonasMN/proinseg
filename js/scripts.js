@@ -517,7 +517,7 @@ function obtenerProductos() {
 					$(divBase).find('#h1Nombre').text(element.nombre);
 					$(divBase).find('#precioProducto').text(element.precio);
 
-					$(divBase).find('#hrefProducto').attr('href','https://jonasmn.github.io/proinseg/detalle_producto.html?id=' + element.id);
+					$(divBase).find('#hrefProducto').attr('href','detalle_producto.html?id=' + element.id);
 					$(divBase).find('#imgProducto').attr('style','background-image: url("admin'+ element.foto_index.substring(1) +'")');
 					$('#divPadreProductos').append(divBase);
 					$('#sinProductos').attr('style','display:none');

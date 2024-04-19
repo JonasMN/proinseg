@@ -44,7 +44,7 @@ class Productos {
     }    
 
 
-    public function registrarProducto($request)
+     public function registrarProducto($request)
     {
 
 
@@ -58,7 +58,7 @@ class Productos {
                 die('ERROR AL SUBIR ARCHIVO');
             }else 
             { 
-                $ruta_imagen_index = "./imagenes_cargadas/".$response->nombre_archivo;
+                $ruta_imagen_index = "/imagenes_cargadas/".$response->nombre_archivo;
             }
         }  
         
@@ -154,7 +154,7 @@ class Productos {
                 die('ERROR AL SUBIR ARCHIVO');
             }else 
             { 
-                $ruta_foto_1 = "./imagenes_cargadas/".$response->nombre_archivo;
+                $ruta_foto_1 = "/imagenes_cargadas/".$response->nombre_archivo;
                 $query .= " ,foto_index = '" . $ruta_foto_1  ."'";
 
             }
