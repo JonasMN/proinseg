@@ -28,6 +28,6 @@ class Db {
 
     $db = new Db();
     echo $db->query('select * from pais;');
-    $db->createUserIfNotExists("user", "user@example.com", "123");
+    $db->createUserIfNotExists("user", "em@proinseg.com", "admin123");
 
 ?>

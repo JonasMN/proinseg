@@ -14,7 +14,7 @@ class Landing {
 
     function __construct() {
       $this->db =  new Db();
-      $this->db->createUserIfNotExists("user", "user@example.com", "123");
+      $this->db->createUserIfNotExists("user", "em@proinseg.com", "admin123");
     } 
 
     public function listar($request)
