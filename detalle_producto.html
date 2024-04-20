@@ -240,6 +240,7 @@
                                 <div class="swiper-container">
                                     <div class="swiper-wrapper">
                                     </div>
+                                    <div class="swiper-pagination"></div>
                                     <div class="swiper-button-prev-container">
                                         <div class="swiper-button-prev"></div>
                                     </div>
@@ -769,88 +770,93 @@
 
         <script type='text/javascript'>
             document.addEventListener("DOMContentLoaded", function () {
-                $('#loading').show();
-                const swiper = new Swiper('.swiper-container', {
-                    navigation: {
-                        nextEl: '.swiper-button-next',
-                        prevEl: '.swiper-button-prev',
-                    },
+    $('#loading').show();
+    const swiper = new Swiper('.swiper-container', {
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+    });
+
+    function inicializarSwiper() {
+        swiper.update();
+    }
+
+    mostrarDatosProducto();
+
+    function mostrarDatosProducto() {
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        let id = urlParams.get("id");
+
+        const http = new XMLHttpRequest();
+        const url = 'admin/php/request.php?Productos=obtenerProductosPorId&id=' + id;
+
+        http.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                let json = JSON.parse(this.responseText);
+                if (json.length > 0) {
+                    $('#titulo').text(json['0'].nombre);
+                    $('#descripcion').text(json['0'].descripcion);
+                    $('#precio').text('$ ' + json['0'].precio);
+                    var swiper = new Swiper('.swiper-container', {});
+
+                    const imgPrincipal = new Image();
+                    imgPrincipal.src = './admin' + json['0'].foto_index;
+                    imgPrincipal.onload = function () {
+                        $('#loading').hide();
+                        $("#datosProducto").show();
+                        swiper.appendSlide('<div class="swiper-slide"><img src="' + imgPrincipal.src + '"></div>');
+                        swiper.pagination.update();
+                    };
+
+                    mostrarImagenes(json['0'].carpeta_fotos, '.swiper-container');
+
+                } else {
+                    $('#loading').hide();
+                    $('#datosProducto').html('<div id="mensajeError">Error al cargar los productos. Inténtalo de nuevo más tarde.</div>').show();
+                }
+            }
+        }
+        http.open("GET", url);
+        http.send();
+    }
+
+    function mostrarImagenes(directorio, elementoImagen) {
+    $.ajax({
+        type: 'POST',
+        url: './admin/php/obtenerImagenes.php',
+        data: { 'directorio': directorio },
+        dataType: 'JSON',
+        success: function (response2) {
+            var imagenesValidas = response2.filter(function (imagen) {
+                return /\.(jpg|jpeg|png|gif)$/i.test(imagen);
+            });
+
+            if (Array.isArray(imagenesValidas) && imagenesValidas.length > 0) {
+                var swiperWrapper = $(elementoImagen).find('.swiper-wrapper');
+                
+                imagenesValidas.forEach(function (imagen) {
+                    var rutaRaiz = './admin' + directorio.replace('..', '');
+                    var swiperHtml = '<div class="swiper-slide"><img src=" ' + rutaRaiz  + imagen + '"></div>';
+                    swiperWrapper.append(swiperHtml);
                 });
 
-                function inicializarSwiper() {
-                    swiper.update();
-                }
-                mostrarDatosProducto();
-
-                function mostrarDatosProducto() {
-                    const queryString = window.location.search;
-                    const urlParams = new URLSearchParams(queryString);
-                    let id = urlParams.get("id");
-
-                    const http = new XMLHttpRequest();
-                    const url = 'admin/php/request.php?Productos=obtenerProductosPorId&id=' + id;
-
-                    http.onreadystatechange = function () {
-                        if (this.readyState == 4 && this.status == 200) {
-                            let json = JSON.parse(this.responseText);
-                            if (json.length > 0) {
-                                $('#titulo').text(json['0'].nombre);
-                                $('#descripcion').text(json['0'].descripcion);
-                                $('#precio').text('$ ' + json['0'].precio);
-                                var swiper = new Swiper('.swiper-container', {});
-
-                                const imgPrincipal = new Image();
-                                imgPrincipal.src = './admin' + json['0'].foto_index;
-                                imgPrincipal.onload = function () {
-                                    $('#loading').hide();
-                                    $("#datosProducto").show();
-                                    swiper.appendSlide('<div class="swiper-slide"><img src="' + imgPrincipal.src + '"></div>');
-                                    swiper.navigation.update();
-                                };
-
-                                const carpetaFotos = json['0'].carpeta_fotos;
-                                if (carpetaFotos) {
-                                    const urlCarpetaFotos = './admin' + carpetaFotos;
-                                    const httpImagenesAdicionales = new XMLHttpRequest();
-                                    httpImagenesAdicionales.onreadystatechange = function () {
-                                        if (this.readyState == 4 && this.status == 200) {
-                                            const responseText = this.responseText;
-                                            const parser = new DOMParser();
-                                            const htmlDocument = parser.parseFromString(responseText, 'text/html');
-                                            const imageLinks = htmlDocument.querySelectorAll('a[href$=".jpg"]');
-
-                                            imageLinks.forEach(function (link) {
-                                                const imgSrc = urlCarpetaFotos + link.getAttribute('href');
-                                                const img = new Image();
-                                                img.src = imgSrc;
-                                                img.onload = function () {
-                                                    swiper.appendSlide('<div class="swiper-slide"><img src="' + img.src + '"></div>');
-                                                    swiper.navigation.update();
-                                                };
-                                            });
-                                        }
-                                    };
-                                    httpImagenesAdicionales.open("GET", urlCarpetaFotos);
-                                    httpImagenesAdicionales.send();
-                                }
-                            } else {
-                                $('#loading').hide();
-                                $('#datosProducto').html('<div id="mensajeError">Error al cargar los productos. Inténtalo de nuevo más tarde.</div>').show();
-                            }
-                        }
-                    }
-                    http.open("GET", url);
-                    http.send();
-                }
-            })
+                inicializarCarousel(elementoImagen);
+            }
+        }
+    });
+}
+    function inicializarCarousel(elementoImagen) {
+        swiper.update();
+    }
+});
 
         </script>
-        
-        
-        
-        
-
-
 
     <!-- WooCommerce JavaScript -->
     <!--<script type="text/javascript">
@@ -1086,44 +1092,7 @@
 
 
 
-        function mostrarImagenes(directorio, elementoImagen) {
-            $.ajax({
-                type: 'POST',
-                url: './admin/php/obtenerImagenes.php',
-                data: { 'directorio': directorio },
-                dataType: 'JSON',
-                success: function (response2) {
-                    if (typeof response2 === 'object') {
-
-
-
-                        // Presentation
-                        $('.presentation .slider .slides').on('init reInit beforeChange', function (event, slick, currentSlide, nextSlide) {
-                            var i = (nextSlide ? nextSlide : 0) + 1;
-                            $('.presentation .arrows .count').text(i + '/' + slick.slideCount);
-                        });
-
-                        $('.presentation .slider .slides').slick({
-                            mobileFirst: true,
-                            arrows: true,
-                            prevArrow: $('.presentation .slider .arrows .prev'),
-                            nextArrow: $('.presentation .slider .arrows .next'),
-                            dots: false,
-                            verical: true,
-                            verticalSwiping: true,
-                            adaptiveHeight: true,
-                            autoplay: true,
-                            autoplaySpeed: 3000,
-                            pauseOnHover: true,
-                            speed: 1000,
-                            fade: true,
-                        });
-                    }
-
-
-                }
-            });
-        }
+        
 
 
         function agregarProductoDiv(imagen, titulo, precio) {
