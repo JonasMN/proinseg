@@ -38,7 +38,7 @@ class Landing {
                 die('ERROR AL SUBIR ARCHIVO');
             }else 
             { 
-                $ruta_foto_1 = "/imagenes_cargadas/".$response->nombre_archivo;
+                $ruta_foto_1 = "./imagenes_cargadas/".$response->nombre_archivo;
             }
         }  
 
@@ -52,7 +52,7 @@ class Landing {
                 die('ERROR AL SUBIR SEGUNDO ARCHIVO');
             }else 
             { 
-                $ruta_foto_2 = "/imagenes_cargadas/".$response->nombre_archivo;
+                $ruta_foto_2 = "./imagenes_cargadas/".$response->nombre_archivo;
             }
         }          
         
@@ -265,7 +265,7 @@ class Landing {
                 die('ERROR AL SUBIR ARCHIVO');
             }else 
             { 
-                $ruta_foto_1 = "/imagenes_cargadas/".$response->nombre_archivo;
+                $ruta_foto_1 = "./imagenes_cargadas/".$response->nombre_archivo;
                 $query .= " ,foto1 = '" . $ruta_foto_1  ."'";
 
             }
@@ -281,7 +281,7 @@ class Landing {
                 die('ERROR AL SUBIR SEGUNDO ARCHIVO');
             }else 
             { 
-                $ruta_foto_2 = "/imagenes_cargadas/".$response->nombre_archivo;
+                $ruta_foto_2 = "./imagenes_cargadas/".$response->nombre_archivo;
                 $query .= " ,foto2 = '" . $ruta_foto_2 . "'";
 
             }
